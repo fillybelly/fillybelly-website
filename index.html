@@ -122,15 +122,6 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .ap3{height:160px;background:linear-gradient(135deg,#2d7a5a,#1a4d38);}
 .ap4{height:160px;background:linear-gradient(135deg,#fdf3e3,#f5d08a);}
 
-/* ─── FOOD STRIP ─── */
-.food-section{background:var(--ink);padding:4rem 0;}
-.food-section .sec-tag{color:#a8d5bc;}
-.food-section .sec-title{color:#fff;}
-.food-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2rem;}
-.food-card{border-top:2px solid rgba(255,255,255,0.12);padding-top:1.25rem;}
-.food-card h3{font-family:var(--serif);font-size:1.05rem;font-weight:400;color:#fff;margin-bottom:0.5rem;}
-.food-card p{font-size:0.82rem;color:rgba(255,255,255,0.5);line-height:1.7;font-weight:300;}
-.food-icon{font-size:1.8rem;margin-bottom:0.75rem;}
 
 /* ─── COLLAB ─── */
 .collab-section{background:var(--cream);padding-bottom:4rem;}
@@ -212,7 +203,6 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
   .itin-grid{grid-template-columns:1fr 1fr;}
   .itin-card.wide{grid-column:span 2;}
   .about-grid{grid-template-columns:1fr;}
-  .food-strip{grid-template-columns:1fr 1fr;}
   .pkg-grid{grid-template-columns:1fr;}
   .nav-links,.nav-ig{display:none;}
   .ham{display:flex;}
@@ -373,6 +363,27 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
   .tab-row{flex-direction:column;}
 }
 
+
+/* ─── CONTACT FORM ─── */
+.contact-form{margin-top:2.5rem;text-align:left;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;}
+.form-group{display:flex;flex-direction:column;gap:0.4rem;}
+.form-group.full{grid-column:1/-1;}
+.form-group label{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);}
+.form-group input,
+.form-group select,
+.form-group textarea{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:#fff;font-family:var(--sans);font-size:0.9rem;padding:11px 14px;border-radius:2px;outline:none;transition:border-color 0.2s,background 0.2s;width:100%;}
+.form-group input::placeholder,
+.form-group textarea::placeholder{color:rgba(255,255,255,0.3);}
+.form-group select option{background:var(--green-dark);color:#fff;}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{border-color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.12);}
+.form-group textarea{resize:vertical;min-height:130px;}
+.form-submit-btn{display:inline-block;background:var(--amber);color:#fff;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:13px 36px;border:none;border-radius:2px;cursor:pointer;transition:opacity 0.2s;margin-top:0.5rem;}
+.form-submit-btn:hover{opacity:0.88;}
+.form-note{font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:1rem;line-height:1.6;}
+@media(max-width:600px){.form-row{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -382,9 +393,18 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
   <div class="nav-inner">
     <a href="#" class="nav-logo">Filly Belly</a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
+      <li><a href="#about">About Us</a></li>
       <li class="nav-item">
-        <a href="#itineraries">Itineraries <span class="nav-arrow">▾</span></a>
+        <a href="#guide-hub">Move to Germany <span class="nav-arrow">▾</span></a>
+        <div class="dropdown">
+          <a href="#guide-hub">🇩🇪 Want to Move to Germany?</a>
+          <a href="#benefits">🎓 Benefits for Students &amp; Job Seekers</a>
+          <a href="#visas">🛂 Visa Types &amp; Processes</a>
+          <a href="#arrival">🏠 What to Do After Arrival</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="#itineraries">Tours <span class="nav-arrow">▾</span></a>
         <div class="dropdown">
           <a href="#itineraries" onclick="showDetail('paris');return false;">🗼 Paris, France</a>
           <a href="#itineraries" onclick="showDetail('prague');return false;">🏰 Prague, Czech Republic</a>
@@ -393,23 +413,6 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
           <a href="#itineraries" onclick="showDetail('luxembourg');return false;">🏛 Luxembourg City</a>
           <a href="#itineraries" onclick="showDetail('poland');return false;">🥟 Warsaw &amp; Kraków</a>
           <a href="#itineraries" onclick="showDetail('germany');return false;">🚂 Germany Day Trips</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a href="#food">Food <span class="nav-arrow">▾</span></a>
-        <div class="dropdown">
-          <a href="#food">🍛 Indian Food in Germany</a>
-          <a href="#food">🥘 Air Fryer Series</a>
-          <a href="#food">🌮 Street Food Across Europe</a>
-          <a href="#food">☕ Café &amp; Restaurant Finds</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a href="#germany-guide">Germany Guide <span class="nav-arrow">▾</span></a>
-        <div class="dropdown">
-          <a href="#visas">🛂 Visa Types</a>
-          <a href="#benefits">🎓 Students &amp; Job Seekers</a>
-          <a href="#arrival">🏠 After You Arrive</a>
         </div>
       </li>
       <li><a href="#collab">Collaborate</a></li>
@@ -421,9 +424,11 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
     </button>
   </div>
   <div class="mob-nav" id="mobnav">
-    <a href="#about" onclick="document.getElementById('mobnav').classList.remove('open')">About</a>
-    <a href="#itineraries" onclick="document.getElementById('mobnav').classList.remove('open')">Itineraries</a>
-    <a href="#food" onclick="document.getElementById('mobnav').classList.remove('open')">Food</a>
+    <a href="#about" onclick="document.getElementById('mobnav').classList.remove('open')">About Us</a>
+    <a href="#guide-hub" onclick="document.getElementById('mobnav').classList.remove('open')">Move to Germany</a>
+    <a href="#visas" onclick="document.getElementById('mobnav').classList.remove('open')">Visas &amp; Processes</a>
+    <a href="#arrival" onclick="document.getElementById('mobnav').classList.remove('open')">After Arrival</a>
+    <a href="#itineraries" onclick="document.getElementById('mobnav').classList.remove('open')">Tours</a>
     <a href="#collab" onclick="document.getElementById('mobnav').classList.remove('open')">Collaborate</a>
     <a href="#contact" onclick="document.getElementById('mobnav').classList.remove('open')">Contact</a>
     <a href="https://instagram.com/filly_belly" target="_blank">↗ Instagram</a>
@@ -472,11 +477,42 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
 </div>
 
 <!-- ─── GUIDE HUB ─── -->
+<section class="about-section" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">About Us</div>
+      <h2 class="sec-title">Meet Filly Belly — <em>Indians Living in Germany</em></h2>
+    </div>
+    <hr class="sec-rule">
+    <div class="about-grid">
+      <div class="about-text">
+        <p>We're Filly Belly — a duo of Indians living in Braunschweig, Germany. What started as sharing food finds on Instagram has grown into a full travel & lifestyle channel for one of Europe's most underserved audiences.</p>
+        <p>Our content is built for Indians in Germany and Indians back home planning their first Schengen adventure. We know the visa stress, the budget hacks, the train apps, and where to find good masala chai in Prague.</p>
+        <p>We speak your language — literally (Hindi, English, learning German) and culturally.</p>
+        <div class="about-pills">
+          <span class="pill g">📍 Braunschweig, Germany</span>
+          <span class="pill g">3 years creating</span>
+          <span class="pill">Travel</span>
+          <span class="pill">Food</span>
+          <span class="pill">Expat life</span>
+          <span class="pill">Language learning</span>
+        </div>
+      </div>
+      <div class="about-photo-grid">
+        <div class="ap ap1">🌍</div>
+        <div class="ap ap2">🍜</div>
+        <div class="ap ap3">🚂</div>
+        <div class="ap ap4">📸</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="guide-section" id="guide-hub">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-tag">What we cover</div>
-      <h2 class="sec-title">Everything you need, <em>in one place</em></h2>
+      <div class="sec-tag">Want to Move to Germany?</div>
+      <h2 class="sec-title">Your Complete Guide <em>to Life in Germany</em></h2>
     </div>
     <hr class="sec-rule">
     <div class="guide-hub-grid">
@@ -514,13 +550,125 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
   </div>
 </section>
 
+<section class="benefits-section" id="benefits">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">Why Move to Germany?</div>
+      <h2 class="sec-title">Benefits Waiting <em>for Indians Moving to Germany</em></h2>
+    </div>
+    <hr class="sec-rule">
+    <div class="tab-row">
+      <button class="tab-btn active" onclick="switchTab('students',this)">🎓 For Students</button>
+      <button class="tab-btn" onclick="switchTab('jobseekers',this)">💼 For Job Seekers</button>
+    </div>
+    <div class="tab-panel active" id="tab-students">
+      <div class="benefits-grid">
+        <div class="benefit-card"><div class="benefit-icon">🚌</div><h3>Semesterticket</h3><p>Most German universities include a Semesterticket — free or heavily discounted public transport for the entire semester, usually covering the whole state.</p><div class="benefit-note">Value: up to €800/semester in savings</div></div>
+        <div class="benefit-card"><div class="benefit-icon">💶</div><h3>BAföG — Student Financial Aid</h3><p>Government student aid up to €992/month. Half is a grant, half is an interest-free loan repaid later. EU and some non-EU students qualify after a period of study.</p><div class="benefit-note">Apply via: bafög-digital.de</div></div>
+        <div class="benefit-card"><div class="benefit-icon">🍽️</div><h3>Mensa &amp; Studentenwerk</h3><p>Student canteens (Mensa) run by Studentenwerk offer hot meals for €1.50–3.50 with a student ID. Also subsidised housing, psychological counselling, and child care.</p><div class="benefit-note">Typical lunch: €2–3.50 with student card</div></div>
+        <div class="benefit-card"><div class="benefit-icon">💊</div><h3>Student Health Insurance</h3><p>Statutory health insurance for students costs ~€120/month at funds like TK, Barmer, or AOK. Free if covered under parents' German insurance (Familienversicherung) and under 25.</p><div class="benefit-note">Best for students: TK (Techniker) or Barmer</div></div>
+        <div class="benefit-card"><div class="benefit-icon">🧑‍💻</div><h3>Werkstudent Jobs</h3><p>During the semester you can work up to 20 hours/week as a Werkstudent without full social security contributions. Companies actively recruit for these roles. Rates: €12–20/hour.</p><div class="benefit-note">Find on: XING, LinkedIn, university job boards</div></div>
+        <div class="benefit-card"><div class="benefit-icon">🏦</div><h3>Blocked Account (Sperrkonto)</h3><p>To get your student visa, deposit ~€11,208 in a blocked account. Released monthly at €934. Providers: Fintiba, expatrio, Deutsche Bank. Setup in 1–3 days online.</p><div class="benefit-note">Easiest: Fintiba or expatrio online</div></div>
+      </div>
+    </div>
+    <div class="tab-panel" id="tab-jobseekers">
+      <div class="benefits-grid">
+        <div class="benefit-card"><div class="benefit-icon">📋</div><h3>Recognition of Qualifications</h3><p>Germany officially recognises foreign degrees. Use anabin.kmk.org to check your degree's status. For regulated professions, apply via the relevant state authority.</p><div class="benefit-note">Check: anabin.kmk.org or anerkennung-in-deutschland.de</div></div>
+        <div class="benefit-card"><div class="benefit-icon">🔍</div><h3>Job Portals for Germany</h3><p>LinkedIn and XING are top networks. StepStone, Indeed.de, and make-it-in-germany.com (government portal for international workers) for listings.</p><div class="benefit-note">Best: LinkedIn + StepStone + company websites</div></div>
+        <div class="benefit-card"><div class="benefit-icon">📄</div><h3>German CV Format</h3><p>German CVs (Lebenslauf) include a professional photo, date of birth, and nationality. Keep it to 2 pages. Include an Anschreiben (cover letter) and copies of certificates.</p><div class="benefit-note">Use Europass or Canva for a clean template</div></div>
+        <div class="benefit-card"><div class="benefit-icon">🗣️</div><h3>German Language</h3><p>B1–B2 German opens most doors. Goethe Institut, Volkshochschule (VHS) courses (€50–150/semester!), and DW Deutsch are great starting points.</p><div class="benefit-note">Cheap option: VHS courses €50–150 per semester</div></div>
+        <div class="benefit-card"><div class="benefit-icon">💰</div><h3>Minimum Wage &amp; Rights</h3><p>Minimum wage is €12.82/hour (2024). All workers regardless of visa status are entitled to paid holidays (minimum 20 days/year), sick pay, and maternity/paternity leave.</p><div class="benefit-note">Minimum wage: €12.82/hour (as of Jan 2024)</div></div>
+        <div class="benefit-card"><div class="benefit-icon">🧾</div><h3>Arbeitsagentur Support</h3><p>Federal Employment Agency offers free job counselling, language courses (Integrationskurs), and relocation support for qualifying workers. Register at arbeitsagentur.de.</p><div class="benefit-note">Free German courses via Arbeitsagentur</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- ─── ITINERARIES ─── -->
+<section class="visa-section" id="visas">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">Germany Visa Guide for Indians</div>
+      <h2 class="sec-title">Germany Visa Types — <em>Which One Is Right for You?</em></h2>
+    </div>
+    <hr class="sec-rule">
+    <div class="visa-grid">
+      <div class="visa-card highlight">
+        <div class="visa-badge">Most common</div>
+        <div class="visa-flag">Student Visa · §16b AufenthG</div>
+        <div class="visa-name">Studienvisum — Student Visa</div>
+        <div class="visa-desc">For anyone admitted to a German university (Uni or Hochschule). You'll need an admission letter, proof of funds via a blocked account (Sperrkonto), health insurance, and a valid passport. Valid for duration of studies + 18 months job search after graduation.</div>
+        <div class="visa-meta-row">💰 Blocked account: <strong>~€11,208/year (€934/month)</strong></div>
+        <div class="visa-meta-row">⏱ Processing: <strong>4–12 weeks at German embassy</strong></div>
+        <div class="visa-meta-row">💼 Work allowed: <strong>120 full days or 240 half-days/year</strong></div>
+      </div>
+      <div class="visa-card">
+        <div class="visa-flag">Job Seeker Visa · §20 AufenthG</div>
+        <div class="visa-name">Arbeitsuchende — Job Seeker Visa</div>
+        <div class="visa-desc">6-month visa to come to Germany and search for a job. You must have a recognised foreign degree, sufficient German language skills (usually B1–B2), and enough savings for the stay. You cannot work during this period — only interview.</div>
+        <div class="visa-meta-row">💰 Funds required: <strong>~€5,604 (€934 × 6 months)</strong></div>
+        <div class="visa-meta-row">⏱ Duration: <strong>6 months, non-renewable</strong></div>
+        <div class="visa-meta-row">📋 Key: <strong>Degree must be recognised in Germany</strong></div>
+      </div>
+      <div class="visa-card">
+        <div class="visa-flag">Skilled Worker · §18 AufenthG</div>
+        <div class="visa-name">Fachkräftevisum — Skilled Worker Visa</div>
+        <div class="visa-desc">For professionals with a recognised vocational qualification or degree and a concrete job offer from a German employer. Since the 2023 Skilled Immigration Act, qualifications from non-EU countries are more easily recognised.</div>
+        <div class="visa-meta-row">📋 Required: <strong>Job offer + recognised qualification</strong></div>
+        <div class="visa-meta-row">⏱ Processing: <strong>Varies by embassy + employer</strong></div>
+        <div class="visa-meta-row">🔄 Leads to: <strong>Permanent residence after 4 years</strong></div>
+      </div>
+      <div class="visa-card">
+        <div class="visa-flag">EU Blue Card · §18g AufenthG</div>
+        <div class="visa-name">Blaue Karte EU — EU Blue Card</div>
+        <div class="visa-desc">For highly qualified workers with a university degree and a job offer above the salary threshold (€45,552/year in 2024; €41,042 for shortage occupations like IT, engineering, medicine). Faster route to permanent residence.</div>
+        <div class="visa-meta-row">💰 Min salary: <strong>€45,552/yr (or €41,042 for shortage jobs)</strong></div>
+        <div class="visa-meta-row">🏠 PR after: <strong>21 months with B1 German, 33 months otherwise</strong></div>
+        <div class="visa-meta-row">👨‍👩‍👧 Family: <strong>Spouse gets immediate work authorisation</strong></div>
+      </div>
+      <div class="visa-card">
+        <div class="visa-flag">Opportunity Card · §20a AufenthG</div>
+        <div class="visa-name">Chancenkarte — Opportunity Card</div>
+        <div class="visa-desc">New since November 2023. A points-based visa to come to Germany and look for work — even without a confirmed job offer. Points awarded for language skills, work experience, age, and previous ties to Germany. Can work part-time (up to 20h/week) while searching.</div>
+        <div class="visa-meta-row">⭐ Points needed: <strong>6 points from the criteria catalogue</strong></div>
+        <div class="visa-meta-row">💼 Part-time: <strong>Up to 20h/week while on this card</strong></div>
+        <div class="visa-meta-row">⏱ Duration: <strong>1 year (extendable once)</strong></div>
+      </div>
+      <div class="visa-card">
+        <div class="visa-flag">Family Reunion · §28–30 AufenthG</div>
+        <div class="visa-name">Familiennachzug — Family Reunion</div>
+        <div class="visa-desc">Join a spouse, parent or child already living legally in Germany. Spouses generally need basic German (A1 level) before the visa is issued. Children under 16 can usually join without language proof. Immediate work authorisation granted.</div>
+        <div class="visa-meta-row">🗣 German needed: <strong>A1 for spouses (Goethe A1 certificate)</strong></div>
+        <div class="visa-meta-row">💼 Work rights: <strong>Immediate work authorisation granted</strong></div>
+        <div class="visa-meta-row">📋 Sponsor needs: <strong>Valid residence permit + adequate housing</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="arrival-section" id="arrival">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">After You Land in Germany</div>
+      <h2 class="sec-title">Your First 30 Days in Germany — <em>The Complete Checklist</em></h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card"><div class="step-num">01</div><h3>Anmeldung — City Registration</h3><p>Register your address at the local Bürgeramt within 14 days. You'll need your passport, rental agreement, and a filled Anmeldeformular. You'll receive a Meldebescheinigung — the key document for everything else.</p><div class="step-tip">→ Book your slot online — walk-in queues are long</div></div>
+      <div class="step-card"><div class="step-num">02</div><h3>Bank Account</h3><p>Open a German bank account as soon as you have your Anmeldung. Best for newcomers: N26 (fully online, English), DKB (free, wide ATM network), or Commerzbank (branches everywhere).</p><div class="step-tip">→ N26 or DKB: open entirely online in 1–2 days</div></div>
+      <div class="step-card"><div class="step-num">03</div><h3>Health Insurance</h3><p>Health insurance is mandatory. As a student apply through TK, Barmer, or AOK (~€120/month). As an employee your employer registers you automatically. Choose your Krankenkasse before starting.</p><div class="step-tip">→ TK and Barmer have English-speaking support</div></div>
+      <div class="step-card"><div class="step-num">04</div><h3>SIM Card</h3><p>Get a German SIM immediately — you need a local number for almost all registrations. Best prepaid: Aldi Talk (Telekom network, best coverage), Lidl Connect, congstar, or O2. All available without a contract.</p><div class="step-tip">→ Aldi Talk: €9.99/month, 10GB on Telekom network</div></div>
+      <div class="step-card"><div class="step-num">05</div><h3>Steuer-ID (Tax ID)</h3><p>Your 11-digit Steueridentifikationsnummer arrives by post 2–4 weeks after Anmeldung — automatic, no application needed. Give it to your employer so tax is calculated correctly.</p><div class="step-tip">→ Keep this number safe — it's yours for life in Germany</div></div>
+      <div class="step-card"><div class="step-num">06</div><h3>Finding Housing</h3><p>WG-Gesucht.de for flatshares (WGs). ImmobilienScout24 and Immowelt for full apartments. eBay Kleinanzeigen for private listings. Studentenwerk housing for students (waitlists exist). Never pay before viewing.</p><div class="step-tip">→ Start WG-Gesucht searches 6–8 weeks before arrival</div></div>
+      <div class="step-card"><div class="step-num">07</div><h3>Deutschlandticket</h3><p>€58/month for unlimited travel on all regional trains, S-Bahns, U-Bahns, trams, and buses across Germany. No distance limit on regional services. Cancel anytime. The single best value purchase in Germany.</p><div class="step-tip">→ Buy via any transport app or DB website</div></div>
+      <div class="step-card"><div class="step-num">08</div><h3>Integration Course</h3><p>Government-subsidised German language + orientation course — 700 hours total, ending in a B1 exam. Cost: ~€1.95/hour after subsidy (or free if registered with Arbeitsagentur). Register at bamf.de.</p><div class="step-tip">→ Register at bamf.de or your local Arbeitsagentur</div></div>
+    </div>
+  </div>
+</section>
+
 <section class="itin-section" id="itineraries">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-tag">Travel guides</div>
-      <h2 class="sec-title">Real itineraries, <em>real budgets</em></h2>
+      <div class="sec-tag">Europe Tours on Indian Budgets</div>
+      <h2 class="sec-title">Budget Europe Itineraries <em>for Indian Travellers</em></h2>
     </div>
     <hr class="sec-rule">
     <div class="itin-grid">
@@ -627,177 +775,10 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
   </div>
 </section>
 
-<!-- ─── ABOUT ─── -->
-<section class="about-section" id="about">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-tag">Who we are</div>
-      <h2 class="sec-title">Indians making <em>Germany home</em></h2>
-    </div>
-    <hr class="sec-rule">
-    <div class="about-grid">
-      <div class="about-text">
-        <p>We're Filly Belly — a duo of Indians living in Braunschweig, Germany. What started as sharing food finds on Instagram has grown into a full travel & lifestyle channel for one of Europe's most underserved audiences.</p>
-        <p>Our content is built for Indians in Germany and Indians back home planning their first Schengen adventure. We know the visa stress, the budget hacks, the train apps, and where to find good masala chai in Prague.</p>
-        <p>We speak your language — literally (Hindi, English, learning German) and culturally.</p>
-        <div class="about-pills">
-          <span class="pill g">📍 Braunschweig, Germany</span>
-          <span class="pill g">3 years creating</span>
-          <span class="pill">Travel</span>
-          <span class="pill">Food</span>
-          <span class="pill">Expat life</span>
-          <span class="pill">Language learning</span>
-        </div>
-      </div>
-      <div class="about-photo-grid">
-        <div class="ap ap1">🌍</div>
-        <div class="ap ap2">🍜</div>
-        <div class="ap ap3">🚂</div>
-        <div class="ap ap4">📸</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── FOOD ─── -->
-<section class="food-section" id="food">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-tag">Food & recipes</div>
-      <h2 class="sec-title">Because home is always <em>the food</em></h2>
-    </div>
-    <div class="food-strip">
-      <div class="food-card"><div class="food-icon">🍛</div><h3>Indian food in Germany</h3><p>Finding good dal makhani, biryani spots, and desi groceries across German cities.</p></div>
-      <div class="food-card"><div class="food-icon">🥘</div><h3>Air Fryer series</h3><p>Quick Indian recipes for a German kitchen — samosas, pakoras, and more.</p></div>
-      <div class="food-card"><div class="food-icon">🌮</div><h3>Street food across Europe</h3><p>Honest reviews of street food in every city we visit — price, taste, portion.</p></div>
-      <div class="food-card"><div class="food-icon">☕</div><h3>Café & restaurant finds</h3><p>Hidden gems, overrated tourist spots, and budget eats that actually taste good.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── VISA TYPES ─── -->
-<section class="visa-section" id="visas">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-tag">Immigration &amp; Visas</div>
-      <h2 class="sec-title">Which German visa <em>is yours?</em></h2>
-    </div>
-    <hr class="sec-rule">
-    <div class="visa-grid">
-      <div class="visa-card highlight">
-        <div class="visa-badge">Most common</div>
-        <div class="visa-flag">Student Visa · §16b AufenthG</div>
-        <div class="visa-name">Studienvisum — Student Visa</div>
-        <div class="visa-desc">For anyone admitted to a German university (Uni or Hochschule). You'll need an admission letter, proof of funds via a blocked account (Sperrkonto), health insurance, and a valid passport. Valid for duration of studies + 18 months job search after graduation.</div>
-        <div class="visa-meta-row">💰 Blocked account: <strong>~€11,208/year (€934/month)</strong></div>
-        <div class="visa-meta-row">⏱ Processing: <strong>4–12 weeks at German embassy</strong></div>
-        <div class="visa-meta-row">💼 Work allowed: <strong>120 full days or 240 half-days/year</strong></div>
-      </div>
-      <div class="visa-card">
-        <div class="visa-flag">Job Seeker Visa · §20 AufenthG</div>
-        <div class="visa-name">Arbeitsuchende — Job Seeker Visa</div>
-        <div class="visa-desc">6-month visa to come to Germany and search for a job. You must have a recognised foreign degree, sufficient German language skills (usually B1–B2), and enough savings for the stay. You cannot work during this period — only interview.</div>
-        <div class="visa-meta-row">💰 Funds required: <strong>~€5,604 (€934 × 6 months)</strong></div>
-        <div class="visa-meta-row">⏱ Duration: <strong>6 months, non-renewable</strong></div>
-        <div class="visa-meta-row">📋 Key: <strong>Degree must be recognised in Germany</strong></div>
-      </div>
-      <div class="visa-card">
-        <div class="visa-flag">Skilled Worker · §18 AufenthG</div>
-        <div class="visa-name">Fachkräftevisum — Skilled Worker Visa</div>
-        <div class="visa-desc">For professionals with a recognised vocational qualification or degree and a concrete job offer from a German employer. Since the 2023 Skilled Immigration Act, qualifications from non-EU countries are more easily recognised.</div>
-        <div class="visa-meta-row">📋 Required: <strong>Job offer + recognised qualification</strong></div>
-        <div class="visa-meta-row">⏱ Processing: <strong>Varies by embassy + employer</strong></div>
-        <div class="visa-meta-row">🔄 Leads to: <strong>Permanent residence after 4 years</strong></div>
-      </div>
-      <div class="visa-card">
-        <div class="visa-flag">EU Blue Card · §18g AufenthG</div>
-        <div class="visa-name">Blaue Karte EU — EU Blue Card</div>
-        <div class="visa-desc">For highly qualified workers with a university degree and a job offer above the salary threshold (€45,552/year in 2024; €41,042 for shortage occupations like IT, engineering, medicine). Faster route to permanent residence.</div>
-        <div class="visa-meta-row">💰 Min salary: <strong>€45,552/yr (or €41,042 for shortage jobs)</strong></div>
-        <div class="visa-meta-row">🏠 PR after: <strong>21 months with B1 German, 33 months otherwise</strong></div>
-        <div class="visa-meta-row">👨‍👩‍👧 Family: <strong>Spouse gets immediate work authorisation</strong></div>
-      </div>
-      <div class="visa-card">
-        <div class="visa-flag">Opportunity Card · §20a AufenthG</div>
-        <div class="visa-name">Chancenkarte — Opportunity Card</div>
-        <div class="visa-desc">New since November 2023. A points-based visa to come to Germany and look for work — even without a confirmed job offer. Points awarded for language skills, work experience, age, and previous ties to Germany. Can work part-time (up to 20h/week) while searching.</div>
-        <div class="visa-meta-row">⭐ Points needed: <strong>6 points from the criteria catalogue</strong></div>
-        <div class="visa-meta-row">💼 Part-time: <strong>Up to 20h/week while on this card</strong></div>
-        <div class="visa-meta-row">⏱ Duration: <strong>1 year (extendable once)</strong></div>
-      </div>
-      <div class="visa-card">
-        <div class="visa-flag">Family Reunion · §28–30 AufenthG</div>
-        <div class="visa-name">Familiennachzug — Family Reunion</div>
-        <div class="visa-desc">Join a spouse, parent or child already living legally in Germany. Spouses generally need basic German (A1 level) before the visa is issued. Children under 16 can usually join without language proof. Immediate work authorisation granted.</div>
-        <div class="visa-meta-row">🗣 German needed: <strong>A1 for spouses (Goethe A1 certificate)</strong></div>
-        <div class="visa-meta-row">💼 Work rights: <strong>Immediate work authorisation granted</strong></div>
-        <div class="visa-meta-row">📋 Sponsor needs: <strong>Valid residence permit + adequate housing</strong></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── BENEFITS ─── -->
-<section class="benefits-section" id="benefits">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-tag">Students &amp; Job Seekers</div>
-      <h2 class="sec-title">Benefits waiting <em>for you in Germany</em></h2>
-    </div>
-    <hr class="sec-rule">
-    <div class="tab-row">
-      <button class="tab-btn active" onclick="switchTab('students',this)">🎓 For Students</button>
-      <button class="tab-btn" onclick="switchTab('jobseekers',this)">💼 For Job Seekers</button>
-    </div>
-    <div class="tab-panel active" id="tab-students">
-      <div class="benefits-grid">
-        <div class="benefit-card"><div class="benefit-icon">🚌</div><h3>Semesterticket</h3><p>Most German universities include a Semesterticket — free or heavily discounted public transport for the entire semester, usually covering the whole state.</p><div class="benefit-note">Value: up to €800/semester in savings</div></div>
-        <div class="benefit-card"><div class="benefit-icon">💶</div><h3>BAföG — Student Financial Aid</h3><p>Government student aid up to €992/month. Half is a grant, half is an interest-free loan repaid later. EU and some non-EU students qualify after a period of study.</p><div class="benefit-note">Apply via: bafög-digital.de</div></div>
-        <div class="benefit-card"><div class="benefit-icon">🍽️</div><h3>Mensa &amp; Studentenwerk</h3><p>Student canteens (Mensa) run by Studentenwerk offer hot meals for €1.50–3.50 with a student ID. Also subsidised housing, psychological counselling, and child care.</p><div class="benefit-note">Typical lunch: €2–3.50 with student card</div></div>
-        <div class="benefit-card"><div class="benefit-icon">💊</div><h3>Student Health Insurance</h3><p>Statutory health insurance for students costs ~€120/month at funds like TK, Barmer, or AOK. Free if covered under parents' German insurance (Familienversicherung) and under 25.</p><div class="benefit-note">Best for students: TK (Techniker) or Barmer</div></div>
-        <div class="benefit-card"><div class="benefit-icon">🧑‍💻</div><h3>Werkstudent Jobs</h3><p>During the semester you can work up to 20 hours/week as a Werkstudent without full social security contributions. Companies actively recruit for these roles. Rates: €12–20/hour.</p><div class="benefit-note">Find on: XING, LinkedIn, university job boards</div></div>
-        <div class="benefit-card"><div class="benefit-icon">🏦</div><h3>Blocked Account (Sperrkonto)</h3><p>To get your student visa, deposit ~€11,208 in a blocked account. Released monthly at €934. Providers: Fintiba, expatrio, Deutsche Bank. Setup in 1–3 days online.</p><div class="benefit-note">Easiest: Fintiba or expatrio online</div></div>
-      </div>
-    </div>
-    <div class="tab-panel" id="tab-jobseekers">
-      <div class="benefits-grid">
-        <div class="benefit-card"><div class="benefit-icon">📋</div><h3>Recognition of Qualifications</h3><p>Germany officially recognises foreign degrees. Use anabin.kmk.org to check your degree's status. For regulated professions, apply via the relevant state authority.</p><div class="benefit-note">Check: anabin.kmk.org or anerkennung-in-deutschland.de</div></div>
-        <div class="benefit-card"><div class="benefit-icon">🔍</div><h3>Job Portals for Germany</h3><p>LinkedIn and XING are top networks. StepStone, Indeed.de, and make-it-in-germany.com (government portal for international workers) for listings.</p><div class="benefit-note">Best: LinkedIn + StepStone + company websites</div></div>
-        <div class="benefit-card"><div class="benefit-icon">📄</div><h3>German CV Format</h3><p>German CVs (Lebenslauf) include a professional photo, date of birth, and nationality. Keep it to 2 pages. Include an Anschreiben (cover letter) and copies of certificates.</p><div class="benefit-note">Use Europass or Canva for a clean template</div></div>
-        <div class="benefit-card"><div class="benefit-icon">🗣️</div><h3>German Language</h3><p>B1–B2 German opens most doors. Goethe Institut, Volkshochschule (VHS) courses (€50–150/semester!), and DW Deutsch are great starting points.</p><div class="benefit-note">Cheap option: VHS courses €50–150 per semester</div></div>
-        <div class="benefit-card"><div class="benefit-icon">💰</div><h3>Minimum Wage &amp; Rights</h3><p>Minimum wage is €12.82/hour (2024). All workers regardless of visa status are entitled to paid holidays (minimum 20 days/year), sick pay, and maternity/paternity leave.</p><div class="benefit-note">Minimum wage: €12.82/hour (as of Jan 2024)</div></div>
-        <div class="benefit-card"><div class="benefit-icon">🧾</div><h3>Arbeitsagentur Support</h3><p>Federal Employment Agency offers free job counselling, language courses (Integrationskurs), and relocation support for qualifying workers. Register at arbeitsagentur.de.</p><div class="benefit-note">Free German courses via Arbeitsagentur</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── AFTER ARRIVAL ─── -->
-<section class="arrival-section" id="arrival">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-tag">First 30 days</div>
-      <h2 class="sec-title">After you land — <em>what to do first</em></h2>
-    </div>
-    <div class="steps-grid">
-      <div class="step-card"><div class="step-num">01</div><h3>Anmeldung — City Registration</h3><p>Register your address at the local Bürgeramt within 14 days. You'll need your passport, rental agreement, and a filled Anmeldeformular. You'll receive a Meldebescheinigung — the key document for everything else.</p><div class="step-tip">→ Book your slot online — walk-in queues are long</div></div>
-      <div class="step-card"><div class="step-num">02</div><h3>Bank Account</h3><p>Open a German bank account as soon as you have your Anmeldung. Best for newcomers: N26 (fully online, English), DKB (free, wide ATM network), or Commerzbank (branches everywhere).</p><div class="step-tip">→ N26 or DKB: open entirely online in 1–2 days</div></div>
-      <div class="step-card"><div class="step-num">03</div><h3>Health Insurance</h3><p>Health insurance is mandatory. As a student apply through TK, Barmer, or AOK (~€120/month). As an employee your employer registers you automatically. Choose your Krankenkasse before starting.</p><div class="step-tip">→ TK and Barmer have English-speaking support</div></div>
-      <div class="step-card"><div class="step-num">04</div><h3>SIM Card</h3><p>Get a German SIM immediately — you need a local number for almost all registrations. Best prepaid: Aldi Talk (Telekom network, best coverage), Lidl Connect, congstar, or O2. All available without a contract.</p><div class="step-tip">→ Aldi Talk: €9.99/month, 10GB on Telekom network</div></div>
-      <div class="step-card"><div class="step-num">05</div><h3>Steuer-ID (Tax ID)</h3><p>Your 11-digit Steueridentifikationsnummer arrives by post 2–4 weeks after Anmeldung — automatic, no application needed. Give it to your employer so tax is calculated correctly.</p><div class="step-tip">→ Keep this number safe — it's yours for life in Germany</div></div>
-      <div class="step-card"><div class="step-num">06</div><h3>Finding Housing</h3><p>WG-Gesucht.de for flatshares (WGs). ImmobilienScout24 and Immowelt for full apartments. eBay Kleinanzeigen for private listings. Studentenwerk housing for students (waitlists exist). Never pay before viewing.</p><div class="step-tip">→ Start WG-Gesucht searches 6–8 weeks before arrival</div></div>
-      <div class="step-card"><div class="step-num">07</div><h3>Deutschlandticket</h3><p>€58/month for unlimited travel on all regional trains, S-Bahns, U-Bahns, trams, and buses across Germany. No distance limit on regional services. Cancel anytime. The single best value purchase in Germany.</p><div class="step-tip">→ Buy via any transport app or DB website</div></div>
-      <div class="step-card"><div class="step-num">08</div><h3>Integration Course</h3><p>Government-subsidised German language + orientation course — 700 hours total, ending in a B1 exam. Cost: ~€1.95/hour after subsidy (or free if registered with Arbeitsagentur). Register at bamf.de.</p><div class="step-tip">→ Register at bamf.de or your local Arbeitsagentur</div></div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ─── COLLAB ─── -->
 <section class="collab-section" id="collab">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-tag">Work with us</div>
+      <div class="sec-tag">Partner With Us</div>
       <h2 class="sec-title">Reach India's <em>European audience</em></h2>
     </div>
     <hr class="sec-rule">
@@ -843,7 +824,6 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
   </div>
 </section>
 
-<!-- ─── CONTACT ─── -->
 <section class="contact-section" id="contact">
   <div class="contact-inner">
     <div class="sec-tag">Get in touch</div>
@@ -860,9 +840,48 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
       <span class="open-tag">Affiliate</span>
       <span class="open-tag">Gifted</span>
       <span class="open-tag">Ambassador</span>
+
+    <form class="contact-form" action="https://formsubmit.co/fillybelly0415@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New message from Filly Belly website">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cf-name">Your Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="e.g. Priya Sharma" required>
+        </div>
+        <div class="form-group">
+          <label for="cf-email">Email Address</label>
+          <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group full">
+          <label for="cf-type">Inquiry Type</label>
+          <select id="cf-type" name="inquiry_type" required>
+            <option value="" disabled selected>Select a topic…</option>
+            <option value="Brand Collaboration">Brand Collaboration</option>
+            <option value="Gifted / UGC">Gifted / UGC</option>
+            <option value="Travel Question">Travel Question</option>
+            <option value="Germany Guide">Germany Guide</option>
+            <option value="General">General / Just saying hi 👋</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group full">
+          <label for="cf-msg">Message</label>
+          <textarea id="cf-msg" name="message" placeholder="Tell us about your idea, question, or collaboration proposal…" required></textarea>
+        </div>
+      </div>
+      <button type="submit" class="form-submit-btn">Send Message →</button>
+      <p class="form-note">We usually respond within 48 hours. For urgent collabs, DM us on Instagram @filly_belly.</p>
+    </form>
     </div>
   </div>
 </section>
+
+
 
 <footer>© 2026 Filly Belly · Indians in Germany · fillybelly0415@gmail.com</footer>
 
