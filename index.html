@@ -37,33 +37,7 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .mob-nav a:last-child{border:none;}
 
 /* ─── HERO ─── */
-
-/* ─── HERO ─── */
-.hero {
-  background: 
-    linear-gradient(135deg, var(--green-dark) 0%, #1e5a40 50%, var(--green-dark) 100%),
-    radial-gradient(circle at 30% 20%, rgba(168,213,188,0.3) 0%, transparent 50%),
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.08)" opacity="0.3"/><circle cx="80" cy="40" r="0.8" fill="rgba(255,255,255,0.06)" opacity="0.2"/><circle cx="50" cy="80" r="1.2" fill="rgba(255,255,255,0.05)" opacity="0.4"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-  background-blend-mode: overlay;
-  background-size: cover, 200% 200%, 100px 100px;
-  position: relative;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
-              linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%), 
-              linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.1) 75%), 
-              linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.1) 75%);
-  background-size: 20px 20px;
-  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-  opacity: 0.15;
-}
-
+.hero{background:var(--green-dark);color:#fff;padding:5rem 2rem 4rem;}
 .hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
 .hero-label{font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:1.2rem;}
 .hero h1{font-family:var(--serif);font-size:clamp(2.4rem,5vw,4rem);line-height:1.12;font-weight:400;margin-bottom:1.4rem;}
@@ -148,7 +122,6 @@ nav{background:var(--white);border-bottom:1px solid var(--border);position:stick
 .ap3{height:160px;background:linear-gradient(135deg,#2d7a5a,#1a4d38);}
 .ap4{height:160px;background:linear-gradient(135deg,#fdf3e3,#f5d08a);}
 
-
 /* ─── COLLAB ─── */
 .collab-section{background:var(--cream);padding-bottom:4rem;}
 .collab-intro{max-width:600px;margin-bottom:2.5rem;}
@@ -229,6 +202,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
   .itin-grid{grid-template-columns:1fr 1fr;}
   .itin-card.wide{grid-column:span 2;}
   .about-grid{grid-template-columns:1fr;}
+  .food-strip{grid-template-columns:1fr 1fr;}
   .pkg-grid{grid-template-columns:1fr;}
   .nav-links,.nav-ig{display:none;}
   .ham{display:flex;}
@@ -389,55 +363,32 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
   .tab-row{flex-direction:column;}
 }
 
+/* --- NEWSLETTER (minimal) --- */
+.newsletter-section{background:var(--white);padding:2.5rem 0;border-top:1px solid var(--border);}
+.newsletter-form{display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-top:0.75rem;}
+.newsletter-row input[type="email"]{flex:1;min-width:220px;padding:9px 12px;border:1px solid var(--border);font-family:var(--sans);font-size:0.9rem;}
+@media(max-width:600px){.newsletter-form{flex-direction:column;align-items:flex-start;}}
 
-/* ─── CONTACT FORM ─── */
-.contact-form{margin-top:2.5rem;text-align:left;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;}
-.form-group{display:flex;flex-direction:column;gap:0.4rem;}
-.form-group.full{grid-column:1/-1;}
-.form-group label{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);}
-.form-group input,
-.form-group select,
-.form-group textarea{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:#fff;font-family:var(--sans);font-size:0.9rem;padding:11px 14px;border-radius:2px;outline:none;transition:border-color 0.2s,background 0.2s;width:100%;}
-.form-group input::placeholder,
-.form-group textarea::placeholder{color:rgba(255,255,255,0.3);}
-.form-group select option{background:var(--green-dark);color:#fff;}
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus{border-color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.12);}
-.form-group textarea{resize:vertical;min-height:130px;}
-.form-submit-btn{display:inline-block;background:var(--amber);color:#fff;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:13px 36px;border:none;border-radius:2px;cursor:pointer;transition:opacity 0.2s;margin-top:0.5rem;}
-.form-submit-btn:hover{opacity:0.88;}
-.form-note{font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:1rem;line-height:1.6;}
-@media(max-width:600px){.form-row{grid-template-columns:1fr;}}
+/* --- CONTACT FORM --- */
+.contact-form{margin-top:2.5rem;text-align:left;max-width:640px;margin-left:auto;margin-right:auto;}
+.contact-row{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.85rem;}
+.contact-group{flex:1;min-width:220px;display:flex;flex-direction:column;gap:0.3rem;}
+.contact-group label{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);}
+.contact-group input,.contact-group select,.contact-group textarea{background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.35);color:#fff;font-family:var(--sans);font-size:0.9rem;padding:10px 12px;border-radius:2px;outline:none;}
+.contact-group textarea{min-height:120px;resize:vertical;}
+.contact-group input::placeholder,.contact-group textarea::placeholder{color:rgba(255,255,255,0.45);}
+.contact-submit{margin-top:0.5rem;}
+.contact-submit button{background:#fff;color:var(--green-dark);font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:11px 24px;border-radius:2px;border:none;cursor:pointer;}
+@media(max-width:640px){.contact-row{flex-direction:column;}}
 
+/* --- SUPPORT / BUY ME A COFFEE --- */
+.support-section{background:var(--cream);padding-bottom:3rem;}
+.support-section .btn-white{margin-top:0.5rem;}
 
-
-
-.hero-photo {
-  position: absolute;
-  top: 15%;
-  right: 4%;
-  width: 30%;
-  height: 72%;
-  object-fit: cover;
-  object-position: 30% 10%;
-  border-radius: 16px 0 16px 16px;
-  box-shadow: 0 30px 100px rgba(0,0,0,0.6);
-  filter: drop-shadow(0 10px 30px rgba(45,122,90,0.4));
-  opacity: 0.96;
-  z-index: 2;
-}
-
-
-.hero-inner {
-  position: relative;
-  z-index: 3;
-}
-@media (max-width: 900px) {
-  .hero-photo { display: none; }
-}
-
+/* --- ABOUT SUPPORT (Buy Me a Coffee in About) --- */
+.about-support{display:flex;justify-content:center;align-items:center;}
+.about-support-inner{text-align:center;}
+.about-support-inner p{font-size:0.82rem;color:var(--light);margin-bottom:0.75rem;}
 </style>
 </head>
 <body>
@@ -447,19 +398,9 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
   <div class="nav-inner">
     <a href="#" class="nav-logo">Filly Belly</a>
     <ul class="nav-links">
-      <li><a href="#about">About Us</a></li>
+      <li><a href="#about">About</a></li>
       <li class="nav-item">
-        <a href="#guide-hub">Move to Germany <span class="nav-arrow">▾</span></a>
-        <div class="dropdown">
-          <a href="#guide-hub">🇩🇪 Want to Move to Germany?</a>
-          <a href="#benefits">🎓 Benefits for Students &amp; Job Seekers</a>
-          <a href="#visas">🛂 Visa Types &amp; Processes</a>
-          <a href="#arrival">🏠 What to Do After Arrival</a>
-        </div>
-        
-      </li>
-      <li class="nav-item">
-        <a href="#itineraries">Tours <span class="nav-arrow">▾</span></a>
+        <a href="#itineraries">Itineraries <span class="nav-arrow">▾</span></a>
         <div class="dropdown">
           <a href="#itineraries" onclick="showDetail('paris');return false;">🗼 Paris, France</a>
           <a href="#itineraries" onclick="showDetail('prague');return false;">🏰 Prague, Czech Republic</a>
@@ -468,6 +409,15 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
           <a href="#itineraries" onclick="showDetail('luxembourg');return false;">🏛 Luxembourg City</a>
           <a href="#itineraries" onclick="showDetail('poland');return false;">🥟 Warsaw &amp; Kraków</a>
           <a href="#itineraries" onclick="showDetail('germany');return false;">🚂 Germany Day Trips</a>
+        </div>
+      </li>
+      
+      <li class="nav-item">
+        <a href="#guide-hub">Germany Guide <span class="nav-arrow">▾</span></a>
+        <div class="dropdown">
+          <a href="#visas">🛂 Visa Types</a>
+          <a href="#benefits">🎓 Students &amp; Job Seekers</a>
+          <a href="#arrival">🏠 After You Arrive</a>
         </div>
       </li>
       <li><a href="#collab">Collaborate</a></li>
@@ -479,11 +429,8 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
     </button>
   </div>
   <div class="mob-nav" id="mobnav">
-    <a href="#about" onclick="document.getElementById('mobnav').classList.remove('open')">About Us</a>
-    <a href="#guide-hub" onclick="document.getElementById('mobnav').classList.remove('open')">Move to Germany</a>
-    <a href="#visas" onclick="document.getElementById('mobnav').classList.remove('open')">Visas &amp; Processes</a>
-    <a href="#arrival" onclick="document.getElementById('mobnav').classList.remove('open')">After Arrival</a>
-    <a href="#itineraries" onclick="document.getElementById('mobnav').classList.remove('open')">Tours</a>
+    <a href="#about" onclick="document.getElementById('mobnav').classList.remove('open')">About</a>
+    <a href="#itineraries" onclick="document.getElementById('mobnav').classList.remove('open')">Itineraries</a>
     <a href="#collab" onclick="document.getElementById('mobnav').classList.remove('open')">Collaborate</a>
     <a href="#contact" onclick="document.getElementById('mobnav').classList.remove('open')">Contact</a>
     <a href="https://instagram.com/filly_belly" target="_blank">↗ Instagram</a>
@@ -499,7 +446,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
       <h1>Your guide to Europe,<br><em>the Indian way</em></h1>
       <p class="hero-desc">Two Indians based in Braunschweig documenting budget train trips, hidden food gems, and real expat life across 10+ European countries.</p>
       <div class="hero-btns">
-        
+        <a href="#itineraries" class="btn-white">Browse Itineraries</a>
         <a href="https://instagram.com/filly_belly" target="_blank" class="btn-outline">↗ Instagram</a>
         <a href="https://youtube.com/@filly_belly" target="_blank" class="btn-outline">↗ YouTube</a>
       </div>
@@ -535,8 +482,8 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
 <section class="about-section" id="about">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-tag">About Us</div>
-      <h2 class="sec-title">Meet Filly Belly — <em>Indians Living in Germany</em></h2>
+      <div class="sec-tag">Who we are</div>
+      <h2 class="sec-title">Indians making <em>Germany home</em></h2>
     </div>
     <hr class="sec-rule">
     <div class="about-grid">
@@ -552,13 +499,16 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
           <span class="pill">Expat life</span>
           <span class="pill">Language learning</span>
         </div>
+
+      <div class="about-support">
+        <div class="about-support-inner">
+          <p>If our guides helped you plan a trip or move to Germany, you can support the next one:</p>
+          
+        </div>
       </div>
-      <div class="about-photo-grid">
-        <div class="ap ap1">🌍</div>
-        <div class="ap ap2">🍜</div>
-        <div class="ap ap3">🚂</div>
-        <div class="ap ap4">📸</div>
+      
       </div>
+      
     </div>
   </div>
 </section>
@@ -566,8 +516,8 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
 <section class="guide-section" id="guide-hub">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-tag">Want to Move to Germany?</div>
-      <h2 class="sec-title">Your Complete Guide <em>to Life in Germany</em></h2>
+      <div class="sec-tag">What we cover</div>
+      <h2 class="sec-title">Everything you need, <em>in one place</em></h2>
     </div>
     <hr class="sec-rule">
     <div class="guide-hub-grid">
@@ -608,8 +558,8 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
 <section class="benefits-section" id="benefits">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-tag">Why Move to Germany?</div>
-      <h2 class="sec-title">Benefits Waiting <em>for Indians Moving to Germany</em></h2>
+      <div class="sec-tag">Students &amp; Job Seekers</div>
+      <h2 class="sec-title">Benefits waiting <em>for you in Germany</em></h2>
     </div>
     <hr class="sec-rule">
     <div class="tab-row">
@@ -642,8 +592,8 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
 <section class="visa-section" id="visas">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-tag">Germany Visa Guide for Indians</div>
-      <h2 class="sec-title">Germany Visa Types — <em>Which One Is Right for You?</em></h2>
+      <div class="sec-tag">Immigration &amp; Visas</div>
+      <h2 class="sec-title">Which German visa <em>is yours?</em></h2>
     </div>
     <hr class="sec-rule">
     <div class="visa-grid">
@@ -696,15 +646,27 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
         <div class="visa-meta-row">💼 Work rights: <strong>Immediate work authorisation granted</strong></div>
         <div class="visa-meta-row">📋 Sponsor needs: <strong>Valid residence permit + adequate housing</strong></div>
       </div>
+    
+    <hr class="sec-rule">
+    <div class="sec-head">
+      <div class="sec-tag">Useful links</div>
+      <h2 class="sec-title">Official information for German visas</h2>
     </div>
+    <ul class="tips-list">
+      <li><a href="https://www.make-it-in-germany.com/en/visa-residence" target="_blank">Make it in Germany — official work &amp; visa portal</a></li>
+      <li><a href="https://www.auswaertiges-amt.de/en/visa-service" target="_blank">Auswärtiges Amt — visa information from the Federal Foreign Office</a></li>
+      <li><a href="https://anabin.kmk.org" target="_blank">anabin.kmk.org — check if your degree is recognised</a></li>
+      <li><a href="https://www.bamf.de" target="_blank">BAMF — integration courses and migration information</a></li>
+      <li><a href="https://www.arbeitsagentur.de" target="_blank">Bundesagentur für Arbeit — job search &amp; counselling</a></li>
+    </ul></div>
   </div>
 </section>
 
 <section class="arrival-section" id="arrival">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-tag">After You Land in Germany</div>
-      <h2 class="sec-title">Your First 30 Days in Germany — <em>The Complete Checklist</em></h2>
+      <div class="sec-tag">First 30 days</div>
+      <h2 class="sec-title">After you land — <em>what to do first</em></h2>
     </div>
     <div class="steps-grid">
       <div class="step-card"><div class="step-num">01</div><h3>Anmeldung — City Registration</h3><p>Register your address at the local Bürgeramt within 14 days. You'll need your passport, rental agreement, and a filled Anmeldeformular. You'll receive a Meldebescheinigung — the key document for everything else.</p><div class="step-tip">→ Book your slot online — walk-in queues are long</div></div>
@@ -719,11 +681,28 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
   </div>
 </section>
 
+<section class="newsletter-section" id="newsletter">
+  <div class="wrap">
+    <hr class="sec-rule">
+    <div class="sec-head">
+      <div class="sec-tag">Newsletter</div>
+      <h2 class="sec-title">Stay in the loop, the Indian way</h2>
+    </div>
+    <form class="newsletter-form" action="https://formsubmit.co/sumanths.vinay@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New Filly Belly newsletter signup">
+      <div class="newsletter-row">
+        <input type="email" name="email" required placeholder="your@email.com">
+        <button type="submit" class="btn-white">Subscribe</button>
+      </div>
+    </form>
+  </div>
+</section>
+
 <section class="itin-section" id="itineraries">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-tag">Europe Tours on Indian Budgets</div>
-      <h2 class="sec-title">Budget Europe Itineraries <em>for Indian Travellers</em></h2>
+      <div class="sec-tag">Travel guides</div>
+      <h2 class="sec-title">Real itineraries, <em>real budgets</em></h2>
     </div>
     <hr class="sec-rule">
     <div class="itin-grid">
@@ -787,7 +766,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
       <!-- LUXEMBOURG -->
       <div class="itin-card" onclick="showDetail('luxembourg')">
         <div class="card-thumb ">
-          <img class="card-thumb-img" src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/4e408d5073da08553599dd0aac09c20ac794c01b.jpg" alt="Luxembourg City" width="800" height="600" loading="lazy">
+          <img class="card-thumb-img" src="https://images.pexels.com/photos/4606729/pexels-photo-4606729.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Luxembourg City" width="800" height="600" loading="lazy">
           <div class="card-badge">Luxembourg</div>
           <div class="card-days">2 Days</div>
         </div>
@@ -819,8 +798,8 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
           <div class="card-badge">Germany</div>
           <div class="card-days">Day Trips</div>
         </div>
-        <div class="card-meta"><span>Germany</span> &nbsp;·&nbsp; From Braunschweig</div>
-        <div class="card-title">Germany Day Trips from Braunschweig</div>
+        <div class="card-meta"><span>Germany</span> &nbsp;·&nbsp; From Berlin</div>
+        <div class="card-title">Germany Day Trips from Berlin</div>
         <div class="card-desc">Hamburg, Hanover, Berlin — perfect day trips using the Deutschlandticket.</div>
         <div class="card-budget">Budget: <strong>~€50–100</strong> per person/day</div>
         <div class="card-link">View full itinerary →</div>
@@ -833,7 +812,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
 <section class="collab-section" id="collab">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-tag">Partner With Us</div>
+      <div class="sec-tag">Work with us</div>
       <h2 class="sec-title">Reach India's <em>European audience</em></h2>
     </div>
     <hr class="sec-rule">
@@ -879,6 +858,18 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
   </div>
 </section>
 
+<section class="support-section" id="support">
+  <div class="wrap">
+    <hr class="sec-rule">
+    <div class="sec-head">
+      <div class="sec-tag">Support</div>
+      <h2 class="sec-title">Buy me a coffee</h2>
+    </div>
+    <p class="contact-sub" style="max-width:480px;margin:0 auto 1.5rem;">If our guides helped you plan a trip or move to Germany, you can support the next reel or itinerary with a small tip.</p>
+    
+  </div>
+</section>
+
 <section class="contact-section" id="contact">
   <div class="contact-inner">
     <div class="sec-tag">Get in touch</div>
@@ -895,48 +886,45 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
       <span class="open-tag">Affiliate</span>
       <span class="open-tag">Gifted</span>
       <span class="open-tag">Ambassador</span>
-
+    </div>
+  
     <form class="contact-form" action="https://formsubmit.co/fillybelly0415@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="New message from Filly Belly website">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="cf-name">Your Name</label>
-          <input type="text" id="cf-name" name="name" placeholder="e.g. Priya Sharma" required>
+      <div class="contact-row">
+        <div class="contact-group">
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" placeholder="Your name" required>
         </div>
-        <div class="form-group">
-          <label for="cf-email">Email Address</label>
-          <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
+        <div class="contact-group">
+          <label for="cf-email">Email</label>
+          <input id="cf-email" name="email" type="email" placeholder="you@email.com" required>
         </div>
       </div>
-      <div class="form-row">
-        <div class="form-group full">
-          <label for="cf-type">Inquiry Type</label>
-          <select id="cf-type" name="inquiry_type" required>
-            <option value="" disabled selected>Select a topic…</option>
-            <option value="Brand Collaboration">Brand Collaboration</option>
-            <option value="Gifted / UGC">Gifted / UGC</option>
-            <option value="Travel Question">Travel Question</option>
-            <option value="Germany Guide">Germany Guide</option>
-            <option value="General">General / Just saying hi 👋</option>
+      <div class="contact-row">
+        <div class="contact-group">
+          <label for="cf-type">What is this about?</label>
+          <select id="cf-type" name="type" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="brand-collab">Brand collaboration</option>
+            <option value="ugc">UGC / content only</option>
+            <option value="travel-question">Travel question</option>
+            <option value="germany-help">Germany move / visa / arrival</option>
+            <option value="other">Other</option>
           </select>
         </div>
       </div>
-      <div class="form-row">
-        <div class="form-group full">
-          <label for="cf-msg">Message</label>
-          <textarea id="cf-msg" name="message" placeholder="Tell us about your idea, question, or collaboration proposal…" required></textarea>
+      <div class="contact-row">
+        <div class="contact-group">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" placeholder="Tell us a bit about your idea or question" required></textarea>
         </div>
       </div>
-      <button type="submit" class="form-submit-btn">Send Message →</button>
-      <p class="form-note">We usually respond within 48 hours. For urgent collabs, DM us on Instagram @filly_belly.</p>
+      <div class="contact-submit">
+        <button type="submit">Send message</button>
+      </div>
     </form>
-    </div>
-  </div>
+</div>
 </section>
-
-
 
 <footer>© 2026 Filly Belly · Indians in Germany · fillybelly0415@gmail.com</footer>
 
@@ -966,7 +954,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
     <ul class="tips-list" id="detailTips"></ul>
     <hr class="detail-rule">
     <div class="section-label">Location Map</div>
-    <div class="detail-map" id="detailMap"></div>
+    <div class="detail-map" id="detailMap"><p style="font-size:0.8rem;color:var(--light);">Open the map directly in <a href="#" id="detailMapLink" target="_blank" style="color:var(--green);text-decoration:underline;">OpenStreetMap</a>.</p></div>
     <div class="detail-ctas">
       <a href="https://instagram.com/filly_belly" target="_blank" class="cta-btn primary">↗ Watch on Instagram</a>
       <a href="https://youtube.com/@filly_belly" target="_blank" class="cta-btn secondary">↗ Watch on YouTube</a>
@@ -1077,20 +1065,22 @@ var data={
     tips:["Poland uses złoty (PLN) — cash is useful but card works most places.","Milk bars (Bar Mleczny) are the ultimate budget food — full meals under €4.","Kraków is the better base — more to see, easier to walk, slightly cheaper than Warsaw.","Book Auschwitz guided tour online at least 1 week in advance — they fill up fast.","Polish IC and EIC trains are comfortable and punctual."]
   },
   germany:{
-    title:"Germany Day Trips from Braunschweig",
+    title:"Germany Day Trips from Berlin",
     country:"Germany · Day trips",
     bg:"bg-germany",
-    intro:"Living in Braunschweig means you're perfectly placed for day trips across northern Germany. With the Deutschlandticket, trains are essentially free on all regional services.",
+    intro:"Living in Berlin means you're perfectly placed for day trips across eastern and northern Germany. With the Deutschlandticket, trains are essentially free on all regional services.",
     meta:[["Transport","DB regional trains"],["Ticket","Deutschlandticket €58/month"],["Best for","Weekends & public holidays"],["Budget","€30–80/person all-in"]],
     days:[
-      {day:"Trip 1",title:"Hamburg — 1h 20min from Braunschweig",desc:"Speicherstadt (red-brick warehouse district), Fischmarkt (Sunday mornings, 5am–9:30am — go early!), and Miniatur Wunderland (book months ahead, €20) — the world's largest model railway.",stops:["Speicherstadt","Fischmarkt","Miniatur Wunderland","Elbphilharmonie Plaza"]},
-      {day:"Trip 2",title:"Hanover — Just 30 minutes away",desc:"Royal Gardens of Herrenhausen (€8, stunning baroque gardens). Maschsee lake walk is free. Neues Rathaus for city views (€2 lift). Good Indian restaurant options here too.",stops:["Herrenhausen Gardens","Maschsee Lake","Neues Rathaus"]},
-      {day:"Trip 3",title:"Göttingen — University Town Vibes",desc:"Charming university town 45 min away. Market Square and the bronze Gänseliesel statue — tradition is to kiss her cheek when you get your PhD. Walk the old town walls.",stops:["Göttingen Marktplatz","Gänseliesel Statue","Old Town Walls"]},
+      {day:"Trip 1",title:"Hamburg — about 1h 45min from Berlin by ICE",desc:"Speicherstadt (red-brick warehouse district), Fischmarkt (Sunday mornings, 5am–9:30am — go early!), and Miniatur Wunderland (book months ahead, €20) — the world's largest model railway.",stops:["Speicherstadt","Fischmarkt","Miniatur Wunderland","Elbphilharmonie Plaza"]},
+      {day:"Trip 2",title:"Hanover — Just 1h 45min from Berlin by IC/RE",desc:"Royal Gardens of Herrenhausen (€8, stunning baroque gardens). Maschsee lake walk is free. Neues Rathaus for city views (€2 lift). Good Indian restaurant options here too.",stops:["Herrenhausen Gardens","Maschsee Lake","Neues Rathaus"]},
+      {day:"Trip 3",title:"Göttingen — University Town Vibes",desc:"Charming university town around 2.5h away by regional trains. Market Square and the bronze Gänseliesel statue — tradition is to kiss her cheek when you get your PhD. Walk the old town walls.",stops:["Göttingen Marktplatz","Gänseliesel Statue","Old Town Walls"]},
       {day:"Trip 4",title:"Berlin — 1h 40min by ICE",desc:"Brandenburg Gate, Berlin Wall Memorial (free), Checkpoint Charlie, Museum Island. Indian food: Desi Masala in Kreuzberg. RE train takes ~2.5h on the Deutschlandticket.",stops:["Brandenburg Gate","Berlin Wall Memorial","Museum Island","Kreuzberg"]}
     ],
     budget:[["Deutschlandticket (monthly)","€58 — all regional trains"],["Hamburg day trip food","€20–35"],["Miniatur Wunderland entry","€20"],["Hanover gardens","€8"],["Berlin RE train","Included in Deutschlandticket"],["Typical day trip","€30–80 all-in"]],
     mapUrl:"https://www.openstreetmap.org/export/embed.html?bbox=9.8000%2C52.1000%2C10.7500%2C53.7000&layer=mapnik&marker=52.2689%2C10.5268",
-    tips:["The Deutschlandticket (€58/month) covers ALL regional trains, S-Bahns, U-Bahns, buses in Germany.","Hamburg Fischmarkt is Sunday only, 5am–9:30am — yes that early, and yes, worth it.","Miniatur Wunderland has 3–4 month waiting lists for weekends — book immediately.","Berlin by RE: take RE6 to Wolfsburg, then RE6 to Berlin (total ~2.5h).","Göttingen on a weekday is better — student city feels different when uni is in session."]
+    tips:["The Deutschlandticket (€58/month) covers ALL regional trains, S-Bahns, U-Bahns, buses in Germany.","Hamburg Fischmarkt is Sunday only, 5am–9:30am — yes that early, and yes, worth it.","Miniatur Wunderland has 3–4 month waiting lists for weekends — book immediately.","Berlin by RE: take RE6 to Wolfsburg, then RE6 to Berlin (total ~2.5h).","Göttingen on a weekday is better — student city feels different when uni is in session."]},
+      {day:"Trip 5",title:"Saxon Switzerland — Elbe Sandstone Hikes",desc:"Early RE train from Berlin Hbf to Bad Schandau (~2h). Hike the Malerweg section: Schrammsteine viewpoint and Carolafelsen. Alternate easier option: Bastei Bridge from Kurort Rathen. Pack snacks and water — there are few shops on the trail.",stops:["Berlin Hbf","Bad Schandau","Schrammsteine","Carolafelsen or Bastei Bridge"]},
+      {day:"Trip 6",title:"Harz National Park — Brocken Summit",desc:"Train to Wernigerode via Magdeburg (~3h). Take the Harz narrow-gauge steam railway to Brocken or hike up (3–4h). Classic North German mountain day: forest trails, misty views, and hearty food back in Wernigerode old town.",stops:["Berlin Hbf","Wernigerode","Brocken Summit","Wernigerode Old Town"]
   }
 };
 
@@ -1139,5 +1129,7 @@ function hideDetail(){
 
 document.addEventListener('keydown',function(e){if(e.key==='Escape')hideDetail();});
 </script>
+
+<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="fillybelly" data-description="Support me on Buy me a coffee!" data-message="Buy us a coffee" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 </body>
 </html>
