@@ -1,10 +1,16 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Filly Belly — Your guide to Europe, the Indian way</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -389,579 +395,589 @@ footer{background:var(--ink);color:rgba(255,255,255,0.3);font-size:0.75rem;text-
 .about-support{display:flex;justify-content:center;align-items:center;}
 .about-support-inner{text-align:center;}
 .about-support-inner p{font-size:0.82rem;color:var(--light);margin-bottom:0.75rem;}
+.newsletter-section .btn-white{background:var(--green);color:#fff;border:1px solid var(--green);cursor:pointer;}
+.itin-card:focus-visible,.guide-hub-card:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px;}
+
+/* Version 2 compact polish: original Filly Belly theme retained */
+:root{--off:var(--cream);}
+section[id]{scroll-margin-top:72px;}
+.hero{padding:3.6rem 2rem 3.1rem;}
+.hero-inner{gap:3rem;}
+.sec-head{padding:2.5rem 0 1.35rem;}
+.sec-rule{margin-bottom:1.6rem;}
+.about-section,.guide-section,.itin-section,.collab-section{padding-bottom:3rem;}
+.about-grid-compact{display:block;max-width:760px;}
+.about-support{justify-content:flex-start;margin-top:1rem;}
+.guide-hub-grid{gap:1rem;}
+.guide-hub-card{padding:1.25rem;}
+.guide-hub-icon{margin-bottom:.45rem;}
+.guide-hub-card p{font-size:.8rem;margin-bottom:.4rem;}
+.visa-section,.benefits-section,.arrival-section{padding:0 0 3rem;}
+.visa-card,.benefit-card,.step-card{padding:1.25rem;}
+.visa-desc,.benefit-card p,.step-card p{line-height:1.62;}
+.steps-grid{gap:1rem;margin-top:1.5rem;}
+.card-thumb{background:var(--green-light);}
+.card-thumb.image-unavailable::after{content:'Photo temporarily unavailable';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--green-dark);font-family:var(--serif);font-size:1rem;}
+.youtube-section{background:var(--green-light);padding:2.6rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.youtube-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem;}
+.youtube-inner p{font-size:.9rem;color:var(--mid);margin-top:.7rem;}
+.youtube-actions{display:flex;align-items:center;gap:1.5rem;flex-shrink:0;}
+.youtube-stat{display:flex;flex-direction:column;border-left:2px solid var(--green);padding-left:1rem;}
+.youtube-stat strong{font-family:var(--serif);font-size:1.8rem;color:var(--green-dark);line-height:1;}
+.youtube-stat span{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--mid);margin-top:.3rem;}
+.collab-cta{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;margin-top:1.5rem;padding:1.25rem 1.5rem;background:var(--green-light);}
+.collab-cta p{font-size:.86rem;color:var(--mid);}
+
+
+
+.newsletter-section{padding:2.3rem 0;}
+.newsletter-section .sec-head{padding:0 0 .75rem;}
+.newsletter-section .sec-rule{display:none;}
+.newsletter-row{display:flex;gap:.5rem;width:100%;max-width:560px;}
+.newsletter-row input[type=email]{min-width:0;width:100%;}
+.newsletter-section .btn-white{background:var(--green);color:#fff;border:1px solid var(--green);cursor:pointer;}
+.contact-section{padding:3.5rem 2rem;}
+.contact-group select option{color:var(--ink);background:#fff;}
+.detail-map{height:auto;overflow:visible;}
+.detail-map iframe{height:300px;}
+@media(max-width:780px){.youtube-inner,.support-inner,.collab-cta{align-items:flex-start;flex-direction:column;}.youtube-actions{width:100%;justify-content:space-between;}.hero{padding:3rem 1.25rem 2.6rem;}}
+@media(max-width:580px){.sec-head{padding-top:2rem;}.guide-hub-card{padding:1rem;}.youtube-actions{align-items:flex-start;flex-direction:column;}.newsletter-row{flex-direction:column;}.contact-group{min-width:0;}.contact-section{padding:3rem 1.25rem;}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{animation:none!important;transition:none!important;}}
+
+/* Native floating coffee button: no third-party script required */
+.floating-coffee{position:fixed;right:18px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:9px;background:#5F7FFF;color:#fff!important;padding:11px 16px;border-radius:999px;font-family:var(--sans);font-size:.82rem;font-weight:700;letter-spacing:.02em;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.22);transition:transform .2s,box-shadow .2s,background .2s;}
+.floating-coffee:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.28);background:#4d6fea;}
+.floating-coffee:focus-visible{outline:3px solid var(--amber);outline-offset:3px;}
+.floating-coffee-icon{font-size:1.15rem;line-height:1;}
+@media(max-width:580px){.floating-coffee{right:12px;bottom:12px;padding:11px 13px;}.floating-coffee-text{font-size:.76rem;}}
 </style>
 </head>
-<body>
-
+<body id="top">
 <!-- ─── NAV ─── -->
 <nav>
-  <div class="nav-inner">
-    <a href="#" class="nav-logo">Filly Belly</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li class="nav-item">
-        <a href="#itineraries">Itineraries <span class="nav-arrow">▾</span></a>
-        <div class="dropdown">
-          <a href="#itineraries" onclick="showDetail('paris');return false;">🗼 Paris, France</a>
-          <a href="#itineraries" onclick="showDetail('prague');return false;">🏰 Prague, Czech Republic</a>
-          <a href="#itineraries" onclick="showDetail('dunkirk');return false;">⚓ Dunkirk, France</a>
-          <a href="#itineraries" onclick="showDetail('croatia');return false;">🏖 Split &amp; Dubrovnik</a>
-          <a href="#itineraries" onclick="showDetail('luxembourg');return false;">🏛 Luxembourg City</a>
-          <a href="#itineraries" onclick="showDetail('poland');return false;">🥟 Warsaw &amp; Kraków</a>
-          <a href="#itineraries" onclick="showDetail('germany');return false;">🚂 Germany Day Trips</a>
-        </div>
-      </li>
-      
-      <li class="nav-item">
-        <a href="#guide-hub">Germany Guide <span class="nav-arrow">▾</span></a>
-        <div class="dropdown">
-          <a href="#visas">🛂 Visa Types</a>
-          <a href="#benefits">🎓 Students &amp; Job Seekers</a>
-          <a href="#arrival">🏠 After You Arrive</a>
-        </div>
-      </li>
-      <li><a href="#collab">Collaborate</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="https://instagram.com/filly_belly" target="_blank" class="nav-ig">↗ @filly_belly</a>
-    <button class="ham" onclick="document.getElementById('mobnav').classList.toggle('open')">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="mob-nav" id="mobnav">
-    <a href="#about" onclick="document.getElementById('mobnav').classList.remove('open')">About</a>
-    <a href="#itineraries" onclick="document.getElementById('mobnav').classList.remove('open')">Itineraries</a>
-    <a href="#collab" onclick="document.getElementById('mobnav').classList.remove('open')">Collaborate</a>
-    <a href="#contact" onclick="document.getElementById('mobnav').classList.remove('open')">Contact</a>
-    <a href="https://instagram.com/filly_belly" target="_blank">↗ Instagram</a>
-    <a href="https://youtube.com/@filly_belly" target="_blank">↗ YouTube</a>
-  </div>
+<div class="nav-inner">
+<a aria-label="Filly Belly home" class="nav-logo" href="#top">Filly Belly</a>
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li class="nav-item">
+<a href="#itineraries">Itineraries <span class="nav-arrow">▾</span></a>
+<div class="dropdown">
+<a href="#itineraries" onclick="showDetail('paris');return false;">🗼 Paris, France</a>
+<a href="#itineraries" onclick="showDetail('prague');return false;">🏰 Prague, Czech Republic</a>
+<a href="#itineraries" onclick="showDetail('dunkirk');return false;">⚓ Dunkirk, France</a>
+<a href="#itineraries" onclick="showDetail('croatia');return false;">🏖 Split &amp; Dubrovnik</a>
+<a href="#itineraries" onclick="showDetail('luxembourg');return false;">🏛 Luxembourg City</a>
+<a href="#itineraries" onclick="showDetail('poland');return false;">🥟 Warsaw &amp; Kraków</a>
+<a href="#itineraries" onclick="showDetail('germany');return false;">🚂 Germany Day Trips</a>
+</div>
+</li>
+<li class="nav-item">
+<a href="#guide-hub">Germany Guide <span class="nav-arrow">▾</span></a>
+<div class="dropdown">
+<a href="#visas">🛂 Visa Types</a>
+<a href="#benefits">🎓 Students &amp; Job Seekers</a>
+<a href="#arrival">🏠 After You Arrive</a>
+</div>
+</li>
+<li><a href="#collab">Collaborate</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<a class="nav-ig" href="https://instagram.com/filly_belly" target="_blank">↗ @filly_belly</a>
+<button class="ham" onclick="document.getElementById('mobnav').classList.toggle('open')" type="button">
+<span></span><span></span><span></span>
+</button>
+</div>
+<div class="mob-nav" id="mobnav">
+<a href="#about" onclick="document.getElementById('mobnav').classList.remove('open')">About</a>
+<a href="#itineraries" onclick="document.getElementById('mobnav').classList.remove('open')">Itineraries</a>
+<a href="#guide-hub" onclick="document.getElementById('mobnav').classList.remove('open')">Germany Guide</a>
+<a href="#collab" onclick="document.getElementById('mobnav').classList.remove('open')">Collaborate</a>
+<a href="#contact" onclick="document.getElementById('mobnav').classList.remove('open')">Contact</a>
+<a href="https://instagram.com/filly_belly" target="_blank">↗ Instagram</a>
+<a href="https://www.youtube.com/@FillyBelly" target="_blank">↗ YouTube</a>
+</div>
 </nav>
-
 <!-- ─── HERO ─── -->
 <section class="hero">
-  <div class="hero-inner">
-    <div>
-      <div class="hero-label">Indians in Germany · Since 2022</div>
-      <h1>Your guide to Europe,<br><em>the Indian way</em></h1>
-      <p class="hero-desc">Two Indians based in Braunschweig documenting budget train trips, hidden food gems, and real expat life across 10+ European countries.</p>
-      <div class="hero-btns">
-        <a href="#itineraries" class="btn-white">Browse Itineraries</a>
-        <a href="https://instagram.com/filly_belly" target="_blank" class="btn-outline">↗ Instagram</a>
-        <a href="https://youtube.com/@filly_belly" target="_blank" class="btn-outline">↗ YouTube</a>
-      </div>
-    </div>
-    <div class="hero-stats">
-      <div class="hero-stat"><div class="num">742K</div><div class="lbl">Top Reel views</div></div>
-      <div class="hero-stat"><div class="num">4,710</div><div class="lbl">YouTube subscribers</div></div>
-      <div class="hero-stat"><div class="num">99.2%</div><div class="lbl">Non-follower reach</div></div>
-      <div class="hero-stat"><div class="num">~20K</div><div class="lbl">Avg Reel views</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── TICKER ─── -->
-<div class="ticker-wrap">
-  <div class="ticker-track">
-    <div class="tick-item"><strong>742K</strong> top reel views<div class="tick-sep"></div></div>
-    <div class="tick-item"><strong>99.2%</strong> non-follower reach<div class="tick-sep"></div></div>
-    <div class="tick-item"><strong>4,710</strong> YouTube subscribers<div class="tick-sep"></div></div>
-    <div class="tick-item"><strong>7</strong> countries covered<div class="tick-sep"></div></div>
-    <div class="tick-item"><strong>~20K</strong> average reel views<div class="tick-sep"></div></div>
-    <div class="tick-item"><strong>3 years</strong> creating content<div class="tick-sep"></div></div>
-    <div class="tick-item"><strong>742K</strong> top reel views<div class="tick-sep"></div></div>
-    <div class="tick-item"><strong>99.2%</strong> non-follower reach<div class="tick-sep"></div></div>
-    <div class="tick-item"><strong>4,710</strong> YouTube subscribers<div class="tick-sep"></div></div>
-    <div class="tick-item"><strong>7</strong> countries covered<div class="tick-sep"></div></div>
-    <div class="tick-item"><strong>~20K</strong> average reel views<div class="tick-sep"></div></div>
-    <div class="tick-item"><strong>3 years</strong> creating content<div class="tick-sep"></div></div>
-  </div>
+<div class="hero-inner">
+<div>
+<div class="hero-label">Indians in Germany · Since 2022</div>
+<h1>Your guide to Europe,<br/><em>the Indian way</em></h1>
+<p class="hero-desc">Two Indians based in Braunschweig documenting budget train trips, hidden food gems, and real expat life across 10+ European countries.</p>
+<div class="hero-btns">
+<a class="btn-white" href="#itineraries">Browse Itineraries</a>
+<a class="btn-outline" href="https://instagram.com/filly_belly" target="_blank">↗ Instagram</a>
+<a class="btn-outline" href="https://www.youtube.com/@FillyBelly" target="_blank">↗ YouTube</a>
 </div>
-
+</div>
+<div class="hero-stats">
+<div class="hero-stat"><div class="num">742K</div><div class="lbl">Top Reel views</div></div>
+<div class="hero-stat"><div class="num">4.99K</div><div class="lbl">YouTube subscribers</div></div>
+<div class="hero-stat"><div class="num">99.2%</div><div class="lbl">Non-follower reach</div></div>
+<div class="hero-stat"><div class="num">~20K</div><div class="lbl">Avg Reel views</div></div>
+</div>
+</div>
+</section>
+<!-- ─── TICKER ─── -->
 <!-- ─── GUIDE HUB ─── -->
 <section class="about-section" id="about">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-tag">Who we are</div>
-      <h2 class="sec-title">Indians making <em>Germany home</em></h2>
-    </div>
-    <hr class="sec-rule">
-    <div class="about-grid">
-      <div class="about-text">
-        <p>We're Filly Belly — a duo of Indians living in Braunschweig, Germany. What started as sharing food finds on Instagram has grown into a full travel & lifestyle channel for one of Europe's most underserved audiences.</p>
-        <p>Our content is built for Indians in Germany and Indians back home planning their first Schengen adventure. We know the visa stress, the budget hacks, the train apps, and where to find good masala chai in Prague.</p>
-        <p>We speak your language — literally (Hindi, English, learning German) and culturally.</p>
-        <div class="about-pills">
-          <span class="pill g">📍 Braunschweig, Germany</span>
-          <span class="pill g">3 years creating</span>
-          <span class="pill">Travel</span>
-          <span class="pill">Food</span>
-          <span class="pill">Expat life</span>
-          <span class="pill">Language learning</span>
-        </div>
-
-      <div class="about-support">
-        <div class="about-support-inner">
-          <p>If our guides helped you plan a trip or move to Germany, you can support the next one:</p>
-          
-        </div>
-      </div>
-      
-      </div>
-      
-    </div>
-  </div>
-</section>
-
-<section class="guide-section" id="guide-hub">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-tag">What we cover</div>
-      <h2 class="sec-title">Everything you need, <em>in one place</em></h2>
-    </div>
-    <hr class="sec-rule">
-    <div class="guide-hub-grid">
-      <a href="#itineraries" class="guide-hub-card">
-        <div class="guide-hub-icon">✈️</div>
-        <h3>Tour Itineraries</h3>
-        <p>Paris, Prague, Croatia, Poland &amp; more — real trips with real Indian budgets.</p>
-        <div class="hub-link">Browse trips →</div>
-      </a>
-      <a href="#visas" class="guide-hub-card">
-        <div class="guide-hub-icon">🛂</div>
-        <h3>Visa Types</h3>
-        <p>Student, Job Seeker, Skilled Worker, EU Blue Card — which visa is right for you?</p>
-        <div class="hub-link">Explore visas →</div>
-      </a>
-      <a href="#benefits" class="guide-hub-card">
-        <div class="guide-hub-icon">🎓</div>
-        <h3>Students &amp; Job Seekers</h3>
-        <p>Subsidised transport, BAföG, blocked accounts, Werkstudent jobs and more.</p>
-        <div class="hub-link">See benefits →</div>
-      </a>
-      <a href="#arrival" class="guide-hub-card">
-        <div class="guide-hub-icon">🏠</div>
-        <h3>After You Arrive</h3>
-        <p>Anmeldung, bank account, health insurance, SIM card — your first 30 days.</p>
-        <div class="hub-link">First steps →</div>
-      </a>
-      <a href="#contact" class="guide-hub-card">
-        <div class="guide-hub-icon">💬</div>
-        <h3>Ask Us Anything</h3>
-        <p>We've been through it. From blocked accounts to city registration — DM us.</p>
-        <div class="hub-link">Get in touch →</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="benefits-section" id="benefits">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-tag">Students &amp; Job Seekers</div>
-      <h2 class="sec-title">Benefits waiting <em>for you in Germany</em></h2>
-    </div>
-    <hr class="sec-rule">
-    <div class="tab-row">
-      <button class="tab-btn active" onclick="switchTab('students',this)">🎓 For Students</button>
-      <button class="tab-btn" onclick="switchTab('jobseekers',this)">💼 For Job Seekers</button>
-    </div>
-    <div class="tab-panel active" id="tab-students">
-      <div class="benefits-grid">
-        <div class="benefit-card"><div class="benefit-icon">🚌</div><h3>Semesterticket</h3><p>Most German universities include a Semesterticket — free or heavily discounted public transport for the entire semester, usually covering the whole state.</p><div class="benefit-note">Value: up to €800/semester in savings</div></div>
-        <div class="benefit-card"><div class="benefit-icon">💶</div><h3>BAföG — Student Financial Aid</h3><p>Government student aid up to €992/month. Half is a grant, half is an interest-free loan repaid later. EU and some non-EU students qualify after a period of study.</p><div class="benefit-note">Apply via: bafög-digital.de</div></div>
-        <div class="benefit-card"><div class="benefit-icon">🍽️</div><h3>Mensa &amp; Studentenwerk</h3><p>Student canteens (Mensa) run by Studentenwerk offer hot meals for €1.50–3.50 with a student ID. Also subsidised housing, psychological counselling, and child care.</p><div class="benefit-note">Typical lunch: €2–3.50 with student card</div></div>
-        <div class="benefit-card"><div class="benefit-icon">💊</div><h3>Student Health Insurance</h3><p>Statutory health insurance for students costs ~€120/month at funds like TK, Barmer, or AOK. Free if covered under parents' German insurance (Familienversicherung) and under 25.</p><div class="benefit-note">Best for students: TK (Techniker) or Barmer</div></div>
-        <div class="benefit-card"><div class="benefit-icon">🧑‍💻</div><h3>Werkstudent Jobs</h3><p>During the semester you can work up to 20 hours/week as a Werkstudent without full social security contributions. Companies actively recruit for these roles. Rates: €12–20/hour.</p><div class="benefit-note">Find on: XING, LinkedIn, university job boards</div></div>
-        <div class="benefit-card"><div class="benefit-icon">🏦</div><h3>Blocked Account (Sperrkonto)</h3><p>To get your student visa, deposit ~€11,208 in a blocked account. Released monthly at €934. Providers: Fintiba, expatrio, Deutsche Bank. Setup in 1–3 days online.</p><div class="benefit-note">Easiest: Fintiba or expatrio online</div></div>
-      </div>
-    </div>
-    <div class="tab-panel" id="tab-jobseekers">
-      <div class="benefits-grid">
-        <div class="benefit-card"><div class="benefit-icon">📋</div><h3>Recognition of Qualifications</h3><p>Germany officially recognises foreign degrees. Use anabin.kmk.org to check your degree's status. For regulated professions, apply via the relevant state authority.</p><div class="benefit-note">Check: anabin.kmk.org or anerkennung-in-deutschland.de</div></div>
-        <div class="benefit-card"><div class="benefit-icon">🔍</div><h3>Job Portals for Germany</h3><p>LinkedIn and XING are top networks. StepStone, Indeed.de, and make-it-in-germany.com (government portal for international workers) for listings.</p><div class="benefit-note">Best: LinkedIn + StepStone + company websites</div></div>
-        <div class="benefit-card"><div class="benefit-icon">📄</div><h3>German CV Format</h3><p>German CVs (Lebenslauf) include a professional photo, date of birth, and nationality. Keep it to 2 pages. Include an Anschreiben (cover letter) and copies of certificates.</p><div class="benefit-note">Use Europass or Canva for a clean template</div></div>
-        <div class="benefit-card"><div class="benefit-icon">🗣️</div><h3>German Language</h3><p>B1–B2 German opens most doors. Goethe Institut, Volkshochschule (VHS) courses (€50–150/semester!), and DW Deutsch are great starting points.</p><div class="benefit-note">Cheap option: VHS courses €50–150 per semester</div></div>
-        <div class="benefit-card"><div class="benefit-icon">💰</div><h3>Minimum Wage &amp; Rights</h3><p>Minimum wage is €12.82/hour (2024). All workers regardless of visa status are entitled to paid holidays (minimum 20 days/year), sick pay, and maternity/paternity leave.</p><div class="benefit-note">Minimum wage: €12.82/hour (as of Jan 2024)</div></div>
-        <div class="benefit-card"><div class="benefit-icon">🧾</div><h3>Arbeitsagentur Support</h3><p>Federal Employment Agency offers free job counselling, language courses (Integrationskurs), and relocation support for qualifying workers. Register at arbeitsagentur.de.</p><div class="benefit-note">Free German courses via Arbeitsagentur</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="visa-section" id="visas">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-tag">Immigration &amp; Visas</div>
-      <h2 class="sec-title">Which German visa <em>is yours?</em></h2>
-    </div>
-    <hr class="sec-rule">
-    <div class="visa-grid">
-      <div class="visa-card highlight">
-        <div class="visa-badge">Most common</div>
-        <div class="visa-flag">Student Visa · §16b AufenthG</div>
-        <div class="visa-name">Studienvisum — Student Visa</div>
-        <div class="visa-desc">For anyone admitted to a German university (Uni or Hochschule). You'll need an admission letter, proof of funds via a blocked account (Sperrkonto), health insurance, and a valid passport. Valid for duration of studies + 18 months job search after graduation.</div>
-        <div class="visa-meta-row">💰 Blocked account: <strong>~€11,208/year (€934/month)</strong></div>
-        <div class="visa-meta-row">⏱ Processing: <strong>4–12 weeks at German embassy</strong></div>
-        <div class="visa-meta-row">💼 Work allowed: <strong>120 full days or 240 half-days/year</strong></div>
-      </div>
-      <div class="visa-card">
-        <div class="visa-flag">Job Seeker Visa · §20 AufenthG</div>
-        <div class="visa-name">Arbeitsuchende — Job Seeker Visa</div>
-        <div class="visa-desc">6-month visa to come to Germany and search for a job. You must have a recognised foreign degree, sufficient German language skills (usually B1–B2), and enough savings for the stay. You cannot work during this period — only interview.</div>
-        <div class="visa-meta-row">💰 Funds required: <strong>~€5,604 (€934 × 6 months)</strong></div>
-        <div class="visa-meta-row">⏱ Duration: <strong>6 months, non-renewable</strong></div>
-        <div class="visa-meta-row">📋 Key: <strong>Degree must be recognised in Germany</strong></div>
-      </div>
-      <div class="visa-card">
-        <div class="visa-flag">Skilled Worker · §18 AufenthG</div>
-        <div class="visa-name">Fachkräftevisum — Skilled Worker Visa</div>
-        <div class="visa-desc">For professionals with a recognised vocational qualification or degree and a concrete job offer from a German employer. Since the 2023 Skilled Immigration Act, qualifications from non-EU countries are more easily recognised.</div>
-        <div class="visa-meta-row">📋 Required: <strong>Job offer + recognised qualification</strong></div>
-        <div class="visa-meta-row">⏱ Processing: <strong>Varies by embassy + employer</strong></div>
-        <div class="visa-meta-row">🔄 Leads to: <strong>Permanent residence after 4 years</strong></div>
-      </div>
-      <div class="visa-card">
-        <div class="visa-flag">EU Blue Card · §18g AufenthG</div>
-        <div class="visa-name">Blaue Karte EU — EU Blue Card</div>
-        <div class="visa-desc">For highly qualified workers with a university degree and a job offer above the salary threshold (€45,552/year in 2024; €41,042 for shortage occupations like IT, engineering, medicine). Faster route to permanent residence.</div>
-        <div class="visa-meta-row">💰 Min salary: <strong>€45,552/yr (or €41,042 for shortage jobs)</strong></div>
-        <div class="visa-meta-row">🏠 PR after: <strong>21 months with B1 German, 33 months otherwise</strong></div>
-        <div class="visa-meta-row">👨‍👩‍👧 Family: <strong>Spouse gets immediate work authorisation</strong></div>
-      </div>
-      <div class="visa-card">
-        <div class="visa-flag">Opportunity Card · §20a AufenthG</div>
-        <div class="visa-name">Chancenkarte — Opportunity Card</div>
-        <div class="visa-desc">New since November 2023. A points-based visa to come to Germany and look for work — even without a confirmed job offer. Points awarded for language skills, work experience, age, and previous ties to Germany. Can work part-time (up to 20h/week) while searching.</div>
-        <div class="visa-meta-row">⭐ Points needed: <strong>6 points from the criteria catalogue</strong></div>
-        <div class="visa-meta-row">💼 Part-time: <strong>Up to 20h/week while on this card</strong></div>
-        <div class="visa-meta-row">⏱ Duration: <strong>1 year (extendable once)</strong></div>
-      </div>
-      <div class="visa-card">
-        <div class="visa-flag">Family Reunion · §28–30 AufenthG</div>
-        <div class="visa-name">Familiennachzug — Family Reunion</div>
-        <div class="visa-desc">Join a spouse, parent or child already living legally in Germany. Spouses generally need basic German (A1 level) before the visa is issued. Children under 16 can usually join without language proof. Immediate work authorisation granted.</div>
-        <div class="visa-meta-row">🗣 German needed: <strong>A1 for spouses (Goethe A1 certificate)</strong></div>
-        <div class="visa-meta-row">💼 Work rights: <strong>Immediate work authorisation granted</strong></div>
-        <div class="visa-meta-row">📋 Sponsor needs: <strong>Valid residence permit + adequate housing</strong></div>
-      </div>
-    
-    <hr class="sec-rule">
-    <div class="sec-head">
-      <div class="sec-tag">Useful links</div>
-      <h2 class="sec-title">Official information for German visas</h2>
-    </div>
-    <ul class="tips-list">
-      <li><a href="https://www.make-it-in-germany.com/en/visa-residence" target="_blank">Make it in Germany — official work &amp; visa portal</a></li>
-      <li><a href="https://www.auswaertiges-amt.de/en/visa-service" target="_blank">Auswärtiges Amt — visa information from the Federal Foreign Office</a></li>
-      <li><a href="https://anabin.kmk.org" target="_blank">anabin.kmk.org — check if your degree is recognised</a></li>
-      <li><a href="https://www.bamf.de" target="_blank">BAMF — integration courses and migration information</a></li>
-      <li><a href="https://www.arbeitsagentur.de" target="_blank">Bundesagentur für Arbeit — job search &amp; counselling</a></li>
-    </ul></div>
-  </div>
-</section>
-
-<section class="arrival-section" id="arrival">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-tag">First 30 days</div>
-      <h2 class="sec-title">After you land — <em>what to do first</em></h2>
-    </div>
-    <div class="steps-grid">
-      <div class="step-card"><div class="step-num">01</div><h3>Anmeldung — City Registration</h3><p>Register your address at the local Bürgeramt within 14 days. You'll need your passport, rental agreement, and a filled Anmeldeformular. You'll receive a Meldebescheinigung — the key document for everything else.</p><div class="step-tip">→ Book your slot online — walk-in queues are long</div></div>
-      <div class="step-card"><div class="step-num">02</div><h3>Bank Account</h3><p>Open a German bank account as soon as you have your Anmeldung. Best for newcomers: N26 (fully online, English), DKB (free, wide ATM network), or Commerzbank (branches everywhere).</p><div class="step-tip">→ N26 or DKB: open entirely online in 1–2 days</div></div>
-      <div class="step-card"><div class="step-num">03</div><h3>Health Insurance</h3><p>Health insurance is mandatory. As a student apply through TK, Barmer, or AOK (~€120/month). As an employee your employer registers you automatically. Choose your Krankenkasse before starting.</p><div class="step-tip">→ TK and Barmer have English-speaking support</div></div>
-      <div class="step-card"><div class="step-num">04</div><h3>SIM Card</h3><p>Get a German SIM immediately — you need a local number for almost all registrations. Best prepaid: Aldi Talk (Telekom network, best coverage), Lidl Connect, congstar, or O2. All available without a contract.</p><div class="step-tip">→ Aldi Talk: €9.99/month, 10GB on Telekom network</div></div>
-      <div class="step-card"><div class="step-num">05</div><h3>Steuer-ID (Tax ID)</h3><p>Your 11-digit Steueridentifikationsnummer arrives by post 2–4 weeks after Anmeldung — automatic, no application needed. Give it to your employer so tax is calculated correctly.</p><div class="step-tip">→ Keep this number safe — it's yours for life in Germany</div></div>
-      <div class="step-card"><div class="step-num">06</div><h3>Finding Housing</h3><p>WG-Gesucht.de for flatshares (WGs). ImmobilienScout24 and Immowelt for full apartments. eBay Kleinanzeigen for private listings. Studentenwerk housing for students (waitlists exist). Never pay before viewing.</p><div class="step-tip">→ Start WG-Gesucht searches 6–8 weeks before arrival</div></div>
-      <div class="step-card"><div class="step-num">07</div><h3>Deutschlandticket</h3><p>€58/month for unlimited travel on all regional trains, S-Bahns, U-Bahns, trams, and buses across Germany. No distance limit on regional services. Cancel anytime. The single best value purchase in Germany.</p><div class="step-tip">→ Buy via any transport app or DB website</div></div>
-      <div class="step-card"><div class="step-num">08</div><h3>Integration Course</h3><p>Government-subsidised German language + orientation course — 700 hours total, ending in a B1 exam. Cost: ~€1.95/hour after subsidy (or free if registered with Arbeitsagentur). Register at bamf.de.</p><div class="step-tip">→ Register at bamf.de or your local Arbeitsagentur</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="newsletter-section" id="newsletter">
-  <div class="wrap">
-    <hr class="sec-rule">
-    <div class="sec-head">
-      <div class="sec-tag">Newsletter</div>
-      <h2 class="sec-title">Stay in the loop, the Indian way</h2>
-    </div>
-    <form class="newsletter-form" action="https://formsubmit.co/sumanths.vinay@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="New Filly Belly newsletter signup">
-      <div class="newsletter-row">
-        <input type="email" name="email" required placeholder="your@email.com">
-        <button type="submit" class="btn-white">Subscribe</button>
-      </div>
-    </form>
-  </div>
-</section>
-
-<section class="itin-section" id="itineraries">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-tag">Travel guides</div>
-      <h2 class="sec-title">Real itineraries, <em>real budgets</em></h2>
-    </div>
-    <hr class="sec-rule">
-    <div class="itin-grid">
-
-      <!-- PARIS – featured wide -->
-      <div class="itin-card wide" onclick="showDetail('paris')">
-        <div class="card-thumb ">
-          <img class="card-thumb-img" src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/df490f5d0a1fdc9d8d1457ce117bfee60dc95837.jpg" alt="Paris Eiffel Tower" width="800" height="600" loading="lazy">
-          <div class="card-badge">France</div>
-          <div class="card-days">4 Days</div>
-        </div>
-        <div class="card-meta"><span>Europe</span> &nbsp;·&nbsp; Paris, France</div>
-        <div class="card-title">Paris on a Budget — The Indian Way</div>
-        <div class="card-desc">From the Eiffel Tower to hidden boulangeries — covering Paris without tourist trap prices. Plus where to find Indian food when you miss home.</div>
-        <div class="card-budget">Budget: <strong>~€350–450</strong> per person</div>
-        <div class="card-link">View full itinerary →</div>
-      </div>
-
-      <!-- PRAGUE -->
-      <div class="itin-card" onclick="showDetail('prague')">
-        <div class="card-thumb ">
-          <img class="card-thumb-img" src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/8780f3842c7f980c27166e360d24387d9c42cd73.jpg" alt="Prague Castle" width="800" height="600" loading="lazy">
-          <div class="card-badge">Czech Republic</div>
-          <div class="card-days">3 Days</div>
-        </div>
-        <div class="card-meta"><span>Europe</span> &nbsp;·&nbsp; Prague</div>
-        <div class="card-title">Prague — Europe's Best Budget City</div>
-        <div class="card-desc">Stunning, cheap, and easy from Germany. A weekend trip that punches way above its price tag.</div>
-        <div class="card-budget">Budget: <strong>~€200–280</strong> per person</div>
-        <div class="card-link">View full itinerary →</div>
-      </div>
-
-      <!-- DUNKIRK -->
-      <div class="itin-card" onclick="showDetail('dunkirk')">
-        <div class="card-thumb ">
-          <img class="card-thumb-img" src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/37c3cd99faddc8d1ce340f67d224e818a3385059.jpg" alt="Dunkirk Beach" width="800" height="600" loading="lazy">
-          <div class="card-badge">France</div>
-          <div class="card-days">2 Days</div>
-        </div>
-        <div class="card-meta"><span>Europe</span> &nbsp;·&nbsp; Dunkirk, France</div>
-        <div class="card-title">Dunkirk — History on the Beach</div>
-        <div class="card-desc">Operation Dynamo, WWII bunkers, and fresh seafood on the French coast. Way more than a Christopher Nolan movie.</div>
-        <div class="card-budget">Budget: <strong>~€180–260</strong> per person</div>
-        <div class="card-link">View full itinerary →</div>
-      </div>
-
-      <!-- CROATIA -->
-      <div class="itin-card" onclick="showDetail('croatia')">
-        <div class="card-thumb ">
-          <img class="card-thumb-img" src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/eb39f694c700695b0067d47412f3993131af7e43.jpg" alt="Dubrovnik Croatia" width="800" height="600" loading="lazy">
-          <div class="card-badge">Croatia</div>
-          <div class="card-days">7 Days</div>
-        </div>
-        <div class="card-meta"><span>Europe</span> &nbsp;·&nbsp; Split & Dubrovnik</div>
-        <div class="card-title">Split & Dubrovnik — Summer 2026</div>
-        <div class="card-desc">The Adriatic coast, scuba diving, Game of Thrones walls, and the freshest seafood. Coming this July.</div>
-        <div class="card-budget">Budget: <strong>~€700–900</strong> per person</div>
-        <div class="card-link">View full itinerary →</div>
-      </div>
-
-      <!-- LUXEMBOURG -->
-      <div class="itin-card" onclick="showDetail('luxembourg')">
-        <div class="card-thumb ">
-          <img class="card-thumb-img" src="https://images.pexels.com/photos/4606729/pexels-photo-4606729.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Luxembourg City" width="800" height="600" loading="lazy">
-          <div class="card-badge">Luxembourg</div>
-          <div class="card-days">2 Days</div>
-        </div>
-        <div class="card-meta"><span>Europe</span> &nbsp;·&nbsp; Luxembourg City</div>
-        <div class="card-title">Luxembourg — Tiny Country, Big Views</div>
-        <div class="card-desc">One of Europe's smallest countries with insane fortress views — and free public transport nationwide.</div>
-        <div class="card-budget">Budget: <strong>~€150–220</strong> per person</div>
-        <div class="card-link">View full itinerary →</div>
-      </div>
-
-      <!-- POLAND -->
-      <div class="itin-card" onclick="showDetail('poland')">
-        <div class="card-thumb ">
-          <img class="card-thumb-img" src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/f07fc804f47dc95a5238fd70ee9695678578127c.jpg" alt="Krakow Poland" width="800" height="600" loading="lazy">
-          <div class="card-badge">Poland</div>
-          <div class="card-days">4 Days</div>
-        </div>
-        <div class="card-meta"><span>Europe</span> &nbsp;·&nbsp; Warsaw & Kraków</div>
-        <div class="card-title">Poland — Pierogi & Palaces</div>
-        <div class="card-desc">Kraków and Warsaw — medieval history, incredible food, and extremely wallet-friendly.</div>
-        <div class="card-budget">Budget: <strong>~€250–350</strong> per person</div>
-        <div class="card-link">View full itinerary →</div>
-      </div>
-
-      <!-- GERMANY -->
-      <div class="itin-card" onclick="showDetail('germany')">
-        <div class="card-thumb ">
-          <img class="card-thumb-img" src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/ca3a6044ed29e95dc1e4059809497093164b0f68.jpg" alt="Hamburg Germany" width="800" height="600" loading="lazy">
-          <div class="card-badge">Germany</div>
-          <div class="card-days">Day Trips</div>
-        </div>
-        <div class="card-meta"><span>Germany</span> &nbsp;·&nbsp; From Berlin</div>
-        <div class="card-title">Germany Day Trips from Berlin</div>
-        <div class="card-desc">Hamburg, Hanover, Berlin — perfect day trips using the Deutschlandticket.</div>
-        <div class="card-budget">Budget: <strong>~€50–100</strong> per person/day</div>
-        <div class="card-link">View full itinerary →</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="collab-section" id="collab">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-tag">Work with us</div>
-      <h2 class="sec-title">Reach India's <em>European audience</em></h2>
-    </div>
-    <hr class="sec-rule">
-    <div class="collab-intro">
-      <p>Our audience is a niche no mainstream European creator owns — Indians living in Germany, and Indians in India planning their first Europe trip. 99.2% non-follower reach means every Reel is a discovery engine, not just a follower update.</p>
-    </div>
-    <div class="pkg-grid">
-      <div class="pkg">
-        <div class="pkg-name">UGC Only</div>
-        <div class="pkg-price">€150–300 <small>/ deliverable</small></div>
-        <ul class="pkg-list">
-          <li>1 short video (15–60s)</li>
-          <li>Raw files handed over</li>
-          <li>No posting required</li>
-          <li>Brand owns usage rights</li>
-          <li>Best for: apps, food, products</li>
-        </ul>
-      </div>
-      <div class="pkg featured">
-        <div class="pkg-badge">Most popular</div>
-        <div class="pkg-name">Nano Collab</div>
-        <div class="pkg-price">€350–600 <small>/ campaign</small></div>
-        <ul class="pkg-list">
-          <li>1 Reel + 2–3 Stories</li>
-          <li>Caption + hashtag strategy</li>
-          <li>Posted to @filly_belly</li>
-          <li>30-day performance report</li>
-          <li>Best for: tourism, transport, hotels</li>
-        </ul>
-      </div>
-      <div class="pkg">
-        <div class="pkg-name">Affiliate / Ongoing</div>
-        <div class="pkg-price" style="font-size:1.4rem">Rev-share <small>+ flat fee</small></div>
-        <ul class="pkg-list">
-          <li>Affiliate link in bio + stories</li>
-          <li>Monthly content mentions</li>
-          <li>Website blog placement</li>
-          <li>YouTube integration option</li>
-          <li>Best for: apps, OTAs, language</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="support-section" id="support">
-  <div class="wrap">
-    <hr class="sec-rule">
-    <div class="sec-head">
-      <div class="sec-tag">Support</div>
-      <h2 class="sec-title">Buy me a coffee</h2>
-    </div>
-    <p class="contact-sub" style="max-width:480px;margin:0 auto 1.5rem;">If our guides helped you plan a trip or move to Germany, you can support the next reel or itinerary with a small tip.</p>
-    
-  </div>
-</section>
-
-<section class="contact-section" id="contact">
-  <div class="contact-inner">
-    <div class="sec-tag">Get in touch</div>
-    <h2 class="sec-title">Let's create something together</h2>
-    <p class="contact-sub">Full analytics screenshots available on request. Open to gifted collaborations for first-time partnerships.</p>
-    <div><a href="mailto:fillybelly0415@gmail.com" class="contact-email">✉ fillybelly0415@gmail.com</a></div>
-    <div class="social-row">
-      <a href="https://instagram.com/filly_belly" target="_blank" class="social-btn">↗ Instagram @filly_belly</a>
-      <a href="https://youtube.com/@filly_belly" target="_blank" class="social-btn">↗ YouTube @filly_belly</a>
-    </div>
-    <div class="open-tags">
-      <span class="open-tag">Paid collabs</span>
-      <span class="open-tag">UGC</span>
-      <span class="open-tag">Affiliate</span>
-      <span class="open-tag">Gifted</span>
-      <span class="open-tag">Ambassador</span>
-    </div>
-  
-    <form class="contact-form" action="https://formsubmit.co/fillybelly0415@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="New message from Filly Belly website">
-      <div class="contact-row">
-        <div class="contact-group">
-          <label for="cf-name">Name</label>
-          <input id="cf-name" name="name" type="text" placeholder="Your name" required>
-        </div>
-        <div class="contact-group">
-          <label for="cf-email">Email</label>
-          <input id="cf-email" name="email" type="email" placeholder="you@email.com" required>
-        </div>
-      </div>
-      <div class="contact-row">
-        <div class="contact-group">
-          <label for="cf-type">What is this about?</label>
-          <select id="cf-type" name="type" required>
-            <option value="" disabled selected>Select one</option>
-            <option value="brand-collab">Brand collaboration</option>
-            <option value="ugc">UGC / content only</option>
-            <option value="travel-question">Travel question</option>
-            <option value="germany-help">Germany move / visa / arrival</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-      </div>
-      <div class="contact-row">
-        <div class="contact-group">
-          <label for="cf-message">Message</label>
-          <textarea id="cf-message" name="message" placeholder="Tell us a bit about your idea or question" required></textarea>
-        </div>
-      </div>
-      <div class="contact-submit">
-        <button type="submit">Send message</button>
-      </div>
-    </form>
+<div class="wrap">
+<div class="sec-head">
+<div class="sec-tag">Who we are</div>
+<h2 class="sec-title">Indians making <em>Germany home</em></h2>
+</div>
+<hr class="sec-rule"/>
+<div class="about-grid about-grid-compact">
+<div class="about-text">
+<p>We're Filly Belly — a duo of Indians living in Braunschweig, Germany. What started as sharing food finds on Instagram has grown into a full travel &amp; lifestyle channel for one of Europe's most underserved audiences.</p>
+<p>Our content is built for Indians in Germany and Indians back home planning their first Schengen adventure. We know the visa stress, the budget hacks, the train apps, and where to find good masala chai in Prague.</p>
+<p>We speak your language — literally (Hindi, English, learning German) and culturally.</p>
+<div class="about-pills">
+<span class="pill g">📍 Braunschweig, Germany</span>
+<span class="pill g">3 years creating</span>
+<span class="pill">Travel</span>
+<span class="pill">Food</span>
+<span class="pill">Expat life</span>
+<span class="pill">Language learning</span>
+</div>
+<div class="about-support">
+<div class="about-support-inner">
+<p>If our guides helped you plan a trip or move to Germany, you can support the next one:</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section>
-
+<section class="guide-section" id="guide-hub">
+<div class="wrap">
+<div class="sec-head">
+<div class="sec-tag">What we cover</div>
+<h2 class="sec-title">Everything you need, <em>in one place</em></h2>
+</div>
+<hr class="sec-rule"/>
+<div class="guide-hub-grid">
+<a class="guide-hub-card" href="#itineraries">
+<div class="guide-hub-icon">✈️</div>
+<h3>Tour Itineraries</h3>
+<p>Paris, Prague, Croatia, Poland &amp; more — real trips with real Indian budgets.</p>
+<div class="hub-link">Browse trips →</div>
+</a>
+<a class="guide-hub-card" href="#visas">
+<div class="guide-hub-icon">🛂</div>
+<h3>Visa Types</h3>
+<p>Student, Job Seeker, Skilled Worker, EU Blue Card — which visa is right for you?</p>
+<div class="hub-link">Explore visas →</div>
+</a>
+<a class="guide-hub-card" href="#benefits">
+<div class="guide-hub-icon">🎓</div>
+<h3>Students &amp; Job Seekers</h3>
+<p>Subsidised transport, BAföG, blocked accounts, Werkstudent jobs and more.</p>
+<div class="hub-link">See benefits →</div>
+</a>
+<a class="guide-hub-card" href="#arrival">
+<div class="guide-hub-icon">🏠</div>
+<h3>After You Arrive</h3>
+<p>Anmeldung, bank account, health insurance, SIM card — your first 30 days.</p>
+<div class="hub-link">First steps →</div>
+</a>
+<a class="guide-hub-card" href="#contact">
+<div class="guide-hub-icon">💬</div>
+<h3>Ask Us Anything</h3>
+<p>We've been through it. From blocked accounts to city registration — DM us.</p>
+<div class="hub-link">Get in touch →</div>
+</a>
+</div>
+</div>
+</section>
+<section class="benefits-section" id="benefits">
+<div class="wrap">
+<div class="sec-head">
+<div class="sec-tag">Students &amp; Job Seekers</div>
+<h2 class="sec-title">Benefits waiting <em>for you in Germany</em></h2>
+</div>
+<hr class="sec-rule"/>
+<div class="tab-row">
+<button class="tab-btn active" onclick="switchTab('students',this)" type="button">🎓 For Students</button>
+<button class="tab-btn" onclick="switchTab('jobseekers',this)" type="button">💼 For Job Seekers</button>
+</div>
+<div class="tab-panel active" id="tab-students">
+<div class="benefits-grid">
+<div class="benefit-card"><div class="benefit-icon">🚌</div><h3>Semesterticket</h3><p>Most German universities include a Semesterticket — free or heavily discounted public transport for the entire semester, usually covering the whole state.</p><div class="benefit-note">Value: up to €800/semester in savings</div></div>
+<div class="benefit-card"><div class="benefit-icon">💶</div><h3>BAföG — Student Financial Aid</h3><p>Government student aid up to €992/month. Half is a grant, half is an interest-free loan repaid later. EU and some non-EU students qualify after a period of study.</p><div class="benefit-note">Apply via: bafög-digital.de</div></div>
+<div class="benefit-card"><div class="benefit-icon">🍽️</div><h3>Mensa &amp; Studentenwerk</h3><p>Student canteens (Mensa) run by Studentenwerk offer hot meals for €1.50–3.50 with a student ID. Also subsidised housing, psychological counselling, and child care.</p><div class="benefit-note">Typical lunch: €2–3.50 with student card</div></div>
+<div class="benefit-card"><div class="benefit-icon">💊</div><h3>Student Health Insurance</h3><p>Statutory health insurance for students costs ~€120/month at funds like TK, Barmer, or AOK. Free if covered under parents' German insurance (Familienversicherung) and under 25.</p><div class="benefit-note">Best for students: TK (Techniker) or Barmer</div></div>
+<div class="benefit-card"><div class="benefit-icon">🧑‍💻</div><h3>Werkstudent Jobs</h3><p>During the semester you can work up to 20 hours/week as a Werkstudent without full social security contributions. Companies actively recruit for these roles. Rates: €12–20/hour.</p><div class="benefit-note">Find on: XING, LinkedIn, university job boards</div></div>
+<div class="benefit-card"><div class="benefit-icon">🏦</div><h3>Blocked Account (Sperrkonto)</h3><p>To get your student visa, deposit ~€11,208 in a blocked account. Released monthly at €934. Providers: Fintiba, expatrio, Deutsche Bank. Setup in 1–3 days online.</p><div class="benefit-note">Easiest: Fintiba or expatrio online</div></div>
+</div>
+</div>
+<div class="tab-panel" id="tab-jobseekers">
+<div class="benefits-grid">
+<div class="benefit-card"><div class="benefit-icon">📋</div><h3>Recognition of Qualifications</h3><p>Germany officially recognises foreign degrees. Use anabin.kmk.org to check your degree's status. For regulated professions, apply via the relevant state authority.</p><div class="benefit-note">Check: anabin.kmk.org or anerkennung-in-deutschland.de</div></div>
+<div class="benefit-card"><div class="benefit-icon">🔍</div><h3>Job Portals for Germany</h3><p>LinkedIn and XING are top networks. StepStone, Indeed.de, and make-it-in-germany.com (government portal for international workers) for listings.</p><div class="benefit-note">Best: LinkedIn + StepStone + company websites</div></div>
+<div class="benefit-card"><div class="benefit-icon">📄</div><h3>German CV Format</h3><p>German CVs (Lebenslauf) include a professional photo, date of birth, and nationality. Keep it to 2 pages. Include an Anschreiben (cover letter) and copies of certificates.</p><div class="benefit-note">Use Europass or Canva for a clean template</div></div>
+<div class="benefit-card"><div class="benefit-icon">🗣️</div><h3>German Language</h3><p>B1–B2 German opens most doors. Goethe Institut, Volkshochschule (VHS) courses (€50–150/semester!), and DW Deutsch are great starting points.</p><div class="benefit-note">Cheap option: VHS courses €50–150 per semester</div></div>
+<div class="benefit-card"><div class="benefit-icon">💰</div><h3>Minimum Wage &amp; Rights</h3><p>Minimum wage is €12.82/hour (2024). All workers regardless of visa status are entitled to paid holidays (minimum 20 days/year), sick pay, and maternity/paternity leave.</p><div class="benefit-note">Minimum wage: €12.82/hour (as of Jan 2024)</div></div>
+<div class="benefit-card"><div class="benefit-icon">🧾</div><h3>Arbeitsagentur Support</h3><p>Federal Employment Agency offers free job counselling, language courses (Integrationskurs), and relocation support for qualifying workers. Register at arbeitsagentur.de.</p><div class="benefit-note">Free German courses via Arbeitsagentur</div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="visa-section" id="visas">
+<div class="wrap">
+<div class="sec-head">
+<div class="sec-tag">Immigration &amp; Visas</div>
+<h2 class="sec-title">Which German visa <em>is yours?</em></h2>
+</div>
+<hr class="sec-rule"/>
+<div class="visa-grid">
+<div class="visa-card highlight">
+<div class="visa-badge">Most common</div>
+<div class="visa-flag">Student Visa · §16b AufenthG</div>
+<div class="visa-name">Studienvisum — Student Visa</div>
+<div class="visa-desc">For anyone admitted to a German university (Uni or Hochschule). You'll need an admission letter, proof of funds via a blocked account (Sperrkonto), health insurance, and a valid passport. Valid for duration of studies + 18 months job search after graduation.</div>
+<div class="visa-meta-row">💰 Blocked account: <strong>~€11,208/year (€934/month)</strong></div>
+<div class="visa-meta-row">⏱ Processing: <strong>4–12 weeks at German embassy</strong></div>
+<div class="visa-meta-row">💼 Work allowed: <strong>120 full days or 240 half-days/year</strong></div>
+</div>
+<div class="visa-card">
+<div class="visa-flag">Job Seeker Visa · §20 AufenthG</div>
+<div class="visa-name">Arbeitsuchende — Job Seeker Visa</div>
+<div class="visa-desc">6-month visa to come to Germany and search for a job. You must have a recognised foreign degree, sufficient German language skills (usually B1–B2), and enough savings for the stay. You cannot work during this period — only interview.</div>
+<div class="visa-meta-row">💰 Funds required: <strong>~€5,604 (€934 × 6 months)</strong></div>
+<div class="visa-meta-row">⏱ Duration: <strong>6 months, non-renewable</strong></div>
+<div class="visa-meta-row">📋 Key: <strong>Degree must be recognised in Germany</strong></div>
+</div>
+<div class="visa-card">
+<div class="visa-flag">Skilled Worker · §18 AufenthG</div>
+<div class="visa-name">Fachkräftevisum — Skilled Worker Visa</div>
+<div class="visa-desc">For professionals with a recognised vocational qualification or degree and a concrete job offer from a German employer. Since the 2023 Skilled Immigration Act, qualifications from non-EU countries are more easily recognised.</div>
+<div class="visa-meta-row">📋 Required: <strong>Job offer + recognised qualification</strong></div>
+<div class="visa-meta-row">⏱ Processing: <strong>Varies by embassy + employer</strong></div>
+<div class="visa-meta-row">🔄 Leads to: <strong>Permanent residence after 4 years</strong></div>
+</div>
+<div class="visa-card">
+<div class="visa-flag">EU Blue Card · §18g AufenthG</div>
+<div class="visa-name">Blaue Karte EU — EU Blue Card</div>
+<div class="visa-desc">For highly qualified workers with a university degree and a job offer above the salary threshold (€45,552/year in 2024; €41,042 for shortage occupations like IT, engineering, medicine). Faster route to permanent residence.</div>
+<div class="visa-meta-row">💰 Min salary: <strong>€45,552/yr (or €41,042 for shortage jobs)</strong></div>
+<div class="visa-meta-row">🏠 PR after: <strong>21 months with B1 German, 33 months otherwise</strong></div>
+<div class="visa-meta-row">👨‍👩‍👧 Family: <strong>Spouse gets immediate work authorisation</strong></div>
+</div>
+<div class="visa-card">
+<div class="visa-flag">Opportunity Card · §20a AufenthG</div>
+<div class="visa-name">Chancenkarte — Opportunity Card</div>
+<div class="visa-desc">New since November 2023. A points-based visa to come to Germany and look for work — even without a confirmed job offer. Points awarded for language skills, work experience, age, and previous ties to Germany. Can work part-time (up to 20h/week) while searching.</div>
+<div class="visa-meta-row">⭐ Points needed: <strong>6 points from the criteria catalogue</strong></div>
+<div class="visa-meta-row">💼 Part-time: <strong>Up to 20h/week while on this card</strong></div>
+<div class="visa-meta-row">⏱ Duration: <strong>1 year (extendable once)</strong></div>
+</div>
+<div class="visa-card">
+<div class="visa-flag">Family Reunion · §28–30 AufenthG</div>
+<div class="visa-name">Familiennachzug — Family Reunion</div>
+<div class="visa-desc">Join a spouse, parent or child already living legally in Germany. Spouses generally need basic German (A1 level) before the visa is issued. Children under 16 can usually join without language proof. Immediate work authorisation granted.</div>
+<div class="visa-meta-row">🗣 German needed: <strong>A1 for spouses (Goethe A1 certificate)</strong></div>
+<div class="visa-meta-row">💼 Work rights: <strong>Immediate work authorisation granted</strong></div>
+<div class="visa-meta-row">📋 Sponsor needs: <strong>Valid residence permit + adequate housing</strong></div>
+</div>
+<hr class="sec-rule"/>
+<div class="sec-head">
+<div class="sec-tag">Useful links</div>
+<h2 class="sec-title">Official information for German visas</h2>
+</div>
+<ul class="tips-list">
+<li><a href="https://www.make-it-in-germany.com/en/visa-residence" target="_blank">Make it in Germany — official work &amp; visa portal</a></li>
+<li><a href="https://www.auswaertiges-amt.de/en/visa-service" target="_blank">Auswärtiges Amt — visa information from the Federal Foreign Office</a></li>
+<li><a href="https://anabin.kmk.org" target="_blank">anabin.kmk.org — check if your degree is recognised</a></li>
+<li><a href="https://www.bamf.de" target="_blank">BAMF — integration courses and migration information</a></li>
+<li><a href="https://www.arbeitsagentur.de" target="_blank">Bundesagentur für Arbeit — job search &amp; counselling</a></li>
+</ul></div>
+</div>
+</section>
+<section class="arrival-section" id="arrival">
+<div class="wrap">
+<div class="sec-head">
+<div class="sec-tag">First 30 days</div>
+<h2 class="sec-title">After you land — <em>what to do first</em></h2>
+</div>
+<div class="steps-grid">
+<div class="step-card"><div class="step-num">01</div><h3>Anmeldung — City Registration</h3><p>Register your address at the local Bürgeramt within 14 days. You'll need your passport, rental agreement, and a filled Anmeldeformular. You'll receive a Meldebescheinigung — the key document for everything else.</p><div class="step-tip">→ Book your slot online — walk-in queues are long</div></div>
+<div class="step-card"><div class="step-num">02</div><h3>Bank Account</h3><p>Open a German bank account as soon as you have your Anmeldung. Best for newcomers: N26 (fully online, English), DKB (free, wide ATM network), or Commerzbank (branches everywhere).</p><div class="step-tip">→ N26 or DKB: open entirely online in 1–2 days</div></div>
+<div class="step-card"><div class="step-num">03</div><h3>Health Insurance</h3><p>Health insurance is mandatory. As a student apply through TK, Barmer, or AOK (~€120/month). As an employee your employer registers you automatically. Choose your Krankenkasse before starting.</p><div class="step-tip">→ TK and Barmer have English-speaking support</div></div>
+<div class="step-card"><div class="step-num">04</div><h3>SIM Card</h3><p>Get a German SIM immediately — you need a local number for almost all registrations. Best prepaid: Aldi Talk (Telekom network, best coverage), Lidl Connect, congstar, or O2. All available without a contract.</p><div class="step-tip">→ Aldi Talk: €9.99/month, 10GB on Telekom network</div></div>
+<div class="step-card"><div class="step-num">05</div><h3>Steuer-ID (Tax ID)</h3><p>Your 11-digit Steueridentifikationsnummer arrives by post 2–4 weeks after Anmeldung — automatic, no application needed. Give it to your employer so tax is calculated correctly.</p><div class="step-tip">→ Keep this number safe — it's yours for life in Germany</div></div>
+<div class="step-card"><div class="step-num">06</div><h3>Finding Housing</h3><p>WG-Gesucht.de for flatshares (WGs). ImmobilienScout24 and Immowelt for full apartments. eBay Kleinanzeigen for private listings. Studentenwerk housing for students (waitlists exist). Never pay before viewing.</p><div class="step-tip">→ Start WG-Gesucht searches 6–8 weeks before arrival</div></div>
+<div class="step-card"><div class="step-num">07</div><h3>Deutschlandticket</h3><p>€58/month for unlimited travel on all regional trains, S-Bahns, U-Bahns, trams, and buses across Germany. No distance limit on regional services. Cancel anytime. The single best value purchase in Germany.</p><div class="step-tip">→ Buy via any transport app or DB website</div></div>
+<div class="step-card"><div class="step-num">08</div><h3>Integration Course</h3><p>Government-subsidised German language + orientation course — 700 hours total, ending in a B1 exam. Cost: ~€1.95/hour after subsidy (or free if registered with Arbeitsagentur). Register at bamf.de.</p><div class="step-tip">→ Register at bamf.de or your local Arbeitsagentur</div></div>
+</div>
+</div>
+</section>
+<section class="newsletter-section" id="newsletter">
+<div class="wrap">
+<hr class="sec-rule"/>
+<div class="sec-head">
+<div class="sec-tag">Newsletter</div>
+<h2 class="sec-title">Stay in the loop, the Indian way</h2>
+</div>
+<form action="https://formsubmit.co/fillybelly0415@gmail.com" class="newsletter-form" method="POST">
+<input name="_subject" type="hidden" value="New Filly Belly newsletter signup"/>
+<div class="newsletter-row">
+<input name="email" placeholder="your@email.com" required="" type="email"/>
+<button class="btn-white" type="submit">Subscribe</button>
+</div>
+</form>
+</div>
+</section>
+<section class="youtube-section" id="youtube">
+<div class="wrap youtube-inner">
+<div>
+<div class="sec-tag">Watch Filly Belly</div>
+<h2 class="sec-title">Life &amp; travel in Germany, <em>on YouTube</em></h2>
+<p>Travel guides, Germany life, food and practical experiences in Telugu.</p>
+</div>
+<div class="youtube-actions">
+<div class="youtube-stat"><strong>4.99K</strong><span>Subscribers</span></div>
+<a class="cta-btn primary" href="https://www.youtube.com/@FillyBelly" rel="noopener noreferrer" target="_blank">Visit YouTube channel →</a>
+</div>
+</div>
+</section><section class="itin-section" id="itineraries">
+<div class="wrap">
+<div class="sec-head">
+<div class="sec-tag">Travel guides</div>
+<h2 class="sec-title">Real itineraries, <em>real budgets</em></h2>
+</div>
+<hr class="sec-rule"/>
+<div class="itin-grid">
+<!-- PARIS – featured wide -->
+<div class="itin-card wide" data-detail="paris" onclick="showDetail('paris')" role="button" tabindex="0">
+<div class="card-thumb">
+<img alt="Paris Eiffel Tower" class="card-thumb-img" decoding="async" height="600" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.classList.add('image-unavailable');" src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/df490f5d0a1fdc9d8d1457ce117bfee60dc95837.jpg" width="800"/>
+<div class="card-badge">France</div>
+<div class="card-days">4 Days</div>
+</div>
+<div class="card-meta"><span>Europe</span>  ·  Paris, France</div>
+<div class="card-title">Paris on a Budget — The Indian Way</div>
+<div class="card-desc">From the Eiffel Tower to hidden boulangeries — covering Paris without tourist trap prices. Plus where to find Indian food when you miss home.</div>
+<div class="card-budget">Budget: <strong>~€350–450</strong> per person</div>
+<div class="card-link">View full itinerary →</div>
+</div>
+<!-- PRAGUE -->
+<div class="itin-card" data-detail="prague" onclick="showDetail('prague')" role="button" tabindex="0">
+<div class="card-thumb">
+<img alt="Prague Castle" class="card-thumb-img" decoding="async" height="600" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.classList.add('image-unavailable');" src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/8780f3842c7f980c27166e360d24387d9c42cd73.jpg" width="800"/>
+<div class="card-badge">Czech Republic</div>
+<div class="card-days">3 Days</div>
+</div>
+<div class="card-meta"><span>Europe</span>  ·  Prague</div>
+<div class="card-title">Prague — Europe's Best Budget City</div>
+<div class="card-desc">Stunning, cheap, and easy from Germany. A weekend trip that punches way above its price tag.</div>
+<div class="card-budget">Budget: <strong>~€200–280</strong> per person</div>
+<div class="card-link">View full itinerary →</div>
+</div>
+<!-- DUNKIRK -->
+<div class="itin-card" data-detail="dunkirk" onclick="showDetail('dunkirk')" role="button" tabindex="0">
+<div class="card-thumb">
+<img alt="Dunkirk Beach" class="card-thumb-img" decoding="async" height="600" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.classList.add('image-unavailable');" src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/37c3cd99faddc8d1ce340f67d224e818a3385059.jpg" width="800"/>
+<div class="card-badge">France</div>
+<div class="card-days">2 Days</div>
+</div>
+<div class="card-meta"><span>Europe</span>  ·  Dunkirk, France</div>
+<div class="card-title">Dunkirk — History on the Beach</div>
+<div class="card-desc">Operation Dynamo, WWII bunkers, and fresh seafood on the French coast. Way more than a Christopher Nolan movie.</div>
+<div class="card-budget">Budget: <strong>~€180–260</strong> per person</div>
+<div class="card-link">View full itinerary →</div>
+</div>
+<!-- CROATIA -->
+<div class="itin-card" data-detail="croatia" onclick="showDetail('croatia')" role="button" tabindex="0">
+<div class="card-thumb">
+<img alt="Dubrovnik Croatia" class="card-thumb-img" decoding="async" height="600" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.classList.add('image-unavailable');" src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/eb39f694c700695b0067d47412f3993131af7e43.jpg" width="800"/>
+<div class="card-badge">Croatia</div>
+<div class="card-days">7 Days</div>
+</div>
+<div class="card-meta"><span>Europe</span>  ·  Split &amp; Dubrovnik</div>
+<div class="card-title">Split &amp; Dubrovnik — Summer 2026</div>
+<div class="card-desc">The Adriatic coast, scuba diving, Game of Thrones walls, and the freshest seafood. Coming this July.</div>
+<div class="card-budget">Budget: <strong>~€700–900</strong> per person</div>
+<div class="card-link">View full itinerary →</div>
+</div>
+<!-- LUXEMBOURG -->
+<div class="itin-card" data-detail="luxembourg" onclick="showDetail('luxembourg')" role="button" tabindex="0">
+<div class="card-thumb">
+<img alt="Luxembourg City" class="card-thumb-img" decoding="async" height="600" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.classList.add('image-unavailable');" src="https://images.pexels.com/photos/4606729/pexels-photo-4606729.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" width="800"/>
+<div class="card-badge">Luxembourg</div>
+<div class="card-days">2 Days</div>
+</div>
+<div class="card-meta"><span>Europe</span>  ·  Luxembourg City</div>
+<div class="card-title">Luxembourg — Tiny Country, Big Views</div>
+<div class="card-desc">One of Europe's smallest countries with insane fortress views — and free public transport nationwide.</div>
+<div class="card-budget">Budget: <strong>~€150–220</strong> per person</div>
+<div class="card-link">View full itinerary →</div>
+</div>
+<!-- POLAND -->
+<div class="itin-card" data-detail="poland" onclick="showDetail('poland')" role="button" tabindex="0">
+<div class="card-thumb">
+<img alt="Krakow Poland" class="card-thumb-img" decoding="async" height="600" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.classList.add('image-unavailable');" src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/f07fc804f47dc95a5238fd70ee9695678578127c.jpg" width="800"/>
+<div class="card-badge">Poland</div>
+<div class="card-days">4 Days</div>
+</div>
+<div class="card-meta"><span>Europe</span>  ·  Warsaw &amp; Kraków</div>
+<div class="card-title">Poland — Pierogi &amp; Palaces</div>
+<div class="card-desc">Kraków and Warsaw — medieval history, incredible food, and extremely wallet-friendly.</div>
+<div class="card-budget">Budget: <strong>~€250–350</strong> per person</div>
+<div class="card-link">View full itinerary →</div>
+</div>
+<!-- GERMANY -->
+<div class="itin-card" data-detail="germany" onclick="showDetail('germany')" role="button" tabindex="0">
+<div class="card-thumb">
+<img alt="Hamburg Germany" class="card-thumb-img" decoding="async" height="600" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.parentElement.classList.add('image-unavailable');" src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/ca3a6044ed29e95dc1e4059809497093164b0f68.jpg" width="800"/>
+<div class="card-badge">Germany</div>
+<div class="card-days">Day Trips</div>
+</div>
+<div class="card-meta"><span>Germany</span>  ·  From Berlin</div>
+<div class="card-title">Germany Day Trips from Berlin</div>
+<div class="card-desc">Hamburg, Hanover, Berlin — perfect day trips using the Deutschlandticket.</div>
+<div class="card-budget">Budget: <strong>~€50–100</strong> per person/day</div>
+<div class="card-link">View full itinerary →</div>
+</div>
+</div>
+</div>
+</section>
+<section class="collab-section" id="collab">
+<div class="wrap">
+<div class="sec-head">
+<div class="sec-tag">Work with us</div>
+<h2 class="sec-title">Reach India's <em>European audience</em></h2>
+</div>
+<hr class="sec-rule"/>
+<div class="collab-intro">
+<p>Our audience is a niche no mainstream European creator owns — Indians living in Germany, and Indians in India planning their first Europe trip. 99.2% non-follower reach means every Reel is a discovery engine, not just a follower update.</p>
+</div>
+<div class="pkg-grid">
+<div class="pkg">
+<div class="pkg-name">UGC Only</div>
+<div class="pkg-price">€150–300 <small>/ deliverable</small></div>
+<ul class="pkg-list">
+<li>1 short video (15–60s)</li>
+<li>Raw files handed over</li>
+<li>No posting required</li>
+<li>Brand owns usage rights</li>
+<li>Best for: apps, food, products</li>
+</ul>
+</div>
+<div class="pkg featured">
+<div class="pkg-badge">Most popular</div>
+<div class="pkg-name">Nano Collab</div>
+<div class="pkg-price">€350–600 <small>/ campaign</small></div>
+<ul class="pkg-list">
+<li>1 Reel + 2–3 Stories</li>
+<li>Caption + hashtag strategy</li>
+<li>Posted to @filly_belly</li>
+<li>30-day performance report</li>
+<li>Best for: tourism, transport, hotels</li>
+</ul>
+</div>
+<div class="pkg">
+<div class="pkg-name">Affiliate / Ongoing</div>
+<div class="pkg-price" style="font-size:1.4rem">Rev-share <small>+ flat fee</small></div>
+<ul class="pkg-list">
+<li>Affiliate link in bio + stories</li>
+<li>Monthly content mentions</li>
+<li>Website blog placement</li>
+<li>YouTube integration option</li>
+<li>Best for: apps, OTAs, language</li>
+</ul>
+</div>
+</div><div class="collab-cta"><p>Tourism, hospitality, food, mobility, apps and Germany-focused partnerships.</p><a class="cta-btn primary" href="#contact">Work with Filly Belly →</a></div>
+</div>
+</section>
+<section class="contact-section" id="contact">
+<div class="contact-inner">
+<div class="sec-tag">Get in touch</div>
+<h2 class="sec-title">Let's create something together</h2>
+<p class="contact-sub">Full analytics screenshots available on request. Open to gifted collaborations for first-time partnerships.</p>
+<div><a class="contact-email" href="mailto:fillybelly0415@gmail.com">✉ fillybelly0415@gmail.com</a></div>
+<div class="social-row">
+<a class="social-btn" href="https://instagram.com/filly_belly" target="_blank">↗ Instagram @filly_belly</a>
+<a class="social-btn" href="https://www.youtube.com/@FillyBelly" target="_blank">↗ YouTube @FillyBelly</a>
+</div>
+<div class="open-tags">
+<span class="open-tag">Paid collabs</span>
+<span class="open-tag">UGC</span>
+<span class="open-tag">Affiliate</span>
+<span class="open-tag">Gifted</span>
+<span class="open-tag">Ambassador</span>
+</div>
+<form action="https://formsubmit.co/fillybelly0415@gmail.com" class="contact-form" method="POST">
+<input name="_subject" type="hidden" value="New message from Filly Belly website"/>
+<div class="contact-row">
+<div class="contact-group">
+<label for="cf-name">Name</label>
+<input id="cf-name" name="name" placeholder="Your name" required="" type="text"/>
+</div>
+<div class="contact-group">
+<label for="cf-email">Email</label>
+<input id="cf-email" name="email" placeholder="you@email.com" required="" type="email"/>
+</div>
+</div>
+<div class="contact-row">
+<div class="contact-group">
+<label for="cf-type">What is this about?</label>
+<select id="cf-type" name="type" required="">
+<option disabled="" selected="" value="">Select one</option>
+<option value="brand-collab">Brand collaboration</option>
+<option value="ugc">UGC / content only</option>
+<option value="travel-question">Travel question</option>
+<option value="germany-help">Germany move / visa / arrival</option>
+<option value="other">Other</option>
+</select>
+</div>
+</div>
+<div class="contact-row">
+<div class="contact-group">
+<label for="cf-message">Message</label>
+<textarea id="cf-message" name="message" placeholder="Tell us a bit about your idea or question" required=""></textarea>
+</div>
+</div>
+<div class="contact-submit">
+<button type="submit">Send message</button>
+</div>
+</form>
+</div>
+</section>
 <footer>© 2026 Filly Belly · Indians in Germany · fillybelly0415@gmail.com</footer>
-
 <!-- ─── DETAIL PAGE ─── -->
 <div class="detail-page" id="detailPage">
-  <nav class="detail-nav">
-    <span class="detail-nav-logo">Filly Belly</span>
-    <button class="back-btn" onclick="hideDetail()">← Back to all itineraries</button>
-  </nav>
-  <div class="detail-hero" id="detailHero">
-    <div class="detail-hero-overlay"></div>
-    <div class="detail-hero-text">
-      <div class="detail-country" id="detailCountry"></div>
-      <div class="detail-title" id="detailTitle"></div>
-    </div>
-  </div>
-  <div class="detail-body">
-    <p class="detail-intro" id="detailIntro"></p>
-    <div class="detail-meta-row" id="detailMeta"></div>
-    <div class="section-label">Day-by-day itinerary</div>
-    <div id="detailDays"></div>
-    <hr class="detail-rule">
-    <div class="section-label">Budget breakdown</div>
-    <table class="budget-table" id="detailBudget"></table>
-    <hr class="detail-rule">
-    <div class="section-label">Insider tips from Filly Belly</div>
-    <ul class="tips-list" id="detailTips"></ul>
-    <hr class="detail-rule">
-    <div class="section-label">Location Map</div>
-    <div class="detail-map" id="detailMap"><p style="font-size:0.8rem;color:var(--light);">Open the map directly in <a href="#" id="detailMapLink" target="_blank" style="color:var(--green);text-decoration:underline;">OpenStreetMap</a>.</p></div>
-    <div class="detail-ctas">
-      <a href="https://instagram.com/filly_belly" target="_blank" class="cta-btn primary">↗ Watch on Instagram</a>
-      <a href="https://youtube.com/@filly_belly" target="_blank" class="cta-btn secondary">↗ Watch on YouTube</a>
-    </div>
-  </div>
+<nav class="detail-nav">
+<span class="detail-nav-logo">Filly Belly</span>
+<button class="back-btn" onclick="hideDetail()" type="button">← Back to all itineraries</button>
+</nav>
+<div class="detail-hero" id="detailHero">
+<div class="detail-hero-overlay"></div>
+<div class="detail-hero-text">
+<div class="detail-country" id="detailCountry"></div>
+<div class="detail-title" id="detailTitle"></div>
 </div>
-
+</div>
+<div class="detail-body">
+<p class="detail-intro" id="detailIntro"></p>
+<div class="detail-meta-row" id="detailMeta"></div>
+<div class="section-label">Day-by-day itinerary</div>
+<div id="detailDays"></div>
+<hr class="detail-rule"/>
+<div class="section-label">Budget breakdown</div>
+<table class="budget-table" id="detailBudget"></table>
+<hr class="detail-rule"/>
+<div class="section-label">Insider tips from Filly Belly</div>
+<ul class="tips-list" id="detailTips"></ul>
+<hr class="detail-rule"/>
+<div class="section-label">Location Map</div>
+<div class="detail-map" id="detailMap"><p style="font-size:0.8rem;color:var(--light);">Map loads when an itinerary is opened.</p></div>
+<div class="detail-ctas">
+<a class="cta-btn primary" href="https://instagram.com/filly_belly" target="_blank">↗ Watch on Instagram</a>
+<a class="cta-btn secondary" href="https://www.youtube.com/@FillyBelly" target="_blank">↗ Watch on YouTube</a>
+</div>
+</div>
+</div>
 <script>
 function switchTab(id,btn){
   document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');});
@@ -1074,18 +1090,19 @@ var data={
       {day:"Trip 1",title:"Hamburg — about 1h 45min from Berlin by ICE",desc:"Speicherstadt (red-brick warehouse district), Fischmarkt (Sunday mornings, 5am–9:30am — go early!), and Miniatur Wunderland (book months ahead, €20) — the world's largest model railway.",stops:["Speicherstadt","Fischmarkt","Miniatur Wunderland","Elbphilharmonie Plaza"]},
       {day:"Trip 2",title:"Hanover — Just 1h 45min from Berlin by IC/RE",desc:"Royal Gardens of Herrenhausen (€8, stunning baroque gardens). Maschsee lake walk is free. Neues Rathaus for city views (€2 lift). Good Indian restaurant options here too.",stops:["Herrenhausen Gardens","Maschsee Lake","Neues Rathaus"]},
       {day:"Trip 3",title:"Göttingen — University Town Vibes",desc:"Charming university town around 2.5h away by regional trains. Market Square and the bronze Gänseliesel statue — tradition is to kiss her cheek when you get your PhD. Walk the old town walls.",stops:["Göttingen Marktplatz","Gänseliesel Statue","Old Town Walls"]},
-      {day:"Trip 4",title:"Berlin — 1h 40min by ICE",desc:"Brandenburg Gate, Berlin Wall Memorial (free), Checkpoint Charlie, Museum Island. Indian food: Desi Masala in Kreuzberg. RE train takes ~2.5h on the Deutschlandticket.",stops:["Brandenburg Gate","Berlin Wall Memorial","Museum Island","Kreuzberg"]}
+      {day:"Trip 4",title:"Berlin — 1h 40min by ICE",desc:"Brandenburg Gate, Berlin Wall Memorial (free), Checkpoint Charlie, Museum Island. Indian food: Desi Masala in Kreuzberg. RE train takes ~2.5h on the Deutschlandticket.",stops:["Brandenburg Gate","Berlin Wall Memorial","Museum Island","Kreuzberg"]},
+      {day:"Trip 5",title:"Saxon Switzerland — Elbe Sandstone Hikes",desc:"Early RE train from Berlin Hbf to Bad Schandau (~2h). Hike the Malerweg section: Schrammsteine viewpoint and Carolafelsen. Alternate easier option: Bastei Bridge from Kurort Rathen. Pack snacks and water — there are few shops on the trail.",stops:["Berlin Hbf","Bad Schandau","Schrammsteine","Carolafelsen or Bastei Bridge"]},
+      {day:"Trip 6",title:"Harz National Park — Brocken Summit",desc:"Train to Wernigerode via Magdeburg (~3h). Take the Harz narrow-gauge steam railway to Brocken or hike up (3–4h). Classic North German mountain day: forest trails, misty views, and hearty food back in Wernigerode old town.",stops:["Berlin Hbf","Wernigerode","Brocken Summit","Wernigerode Old Town"]}
     ],
     budget:[["Deutschlandticket (monthly)","€58 — all regional trains"],["Hamburg day trip food","€20–35"],["Miniatur Wunderland entry","€20"],["Hanover gardens","€8"],["Berlin RE train","Included in Deutschlandticket"],["Typical day trip","€30–80 all-in"]],
     mapUrl:"https://www.openstreetmap.org/export/embed.html?bbox=9.8000%2C52.1000%2C10.7500%2C53.7000&layer=mapnik&marker=52.2689%2C10.5268",
-    tips:["The Deutschlandticket (€58/month) covers ALL regional trains, S-Bahns, U-Bahns, buses in Germany.","Hamburg Fischmarkt is Sunday only, 5am–9:30am — yes that early, and yes, worth it.","Miniatur Wunderland has 3–4 month waiting lists for weekends — book immediately.","Berlin by RE: take RE6 to Wolfsburg, then RE6 to Berlin (total ~2.5h).","Göttingen on a weekday is better — student city feels different when uni is in session."]},
-      {day:"Trip 5",title:"Saxon Switzerland — Elbe Sandstone Hikes",desc:"Early RE train from Berlin Hbf to Bad Schandau (~2h). Hike the Malerweg section: Schrammsteine viewpoint and Carolafelsen. Alternate easier option: Bastei Bridge from Kurort Rathen. Pack snacks and water — there are few shops on the trail.",stops:["Berlin Hbf","Bad Schandau","Schrammsteine","Carolafelsen or Bastei Bridge"]},
-      {day:"Trip 6",title:"Harz National Park — Brocken Summit",desc:"Train to Wernigerode via Magdeburg (~3h). Take the Harz narrow-gauge steam railway to Brocken or hike up (3–4h). Classic North German mountain day: forest trails, misty views, and hearty food back in Wernigerode old town.",stops:["Berlin Hbf","Wernigerode","Brocken Summit","Wernigerode Old Town"]
+    tips:["The Deutschlandticket (€58/month) covers ALL regional trains, S-Bahns, U-Bahns, buses in Germany.","Hamburg Fischmarkt is Sunday only, 5am–9:30am — yes that early, and yes, worth it.","Miniatur Wunderland has 3–4 month waiting lists for weekends — book immediately.","Berlin by RE: take RE6 to Wolfsburg, then RE6 to Berlin (total ~2.5h).","Göttingen on a weekday is better — student city feels different when uni is in session."]
   }
 };
 
 function showDetail(id){
   var d=data[id];
+  if(!d){return;}
   var page=document.getElementById('detailPage');
   document.getElementById('detailHero').className='detail-hero '+d.bg;
   document.getElementById('detailCountry').textContent=d.country;
@@ -1117,6 +1134,13 @@ function showDetail(id){
   d.tips.forEach(function(t){tipsHTML+='<li>'+t+'</li>';});
   document.getElementById('detailTips').innerHTML=tipsHTML;
 
+  var map=document.getElementById('detailMap');
+  if(d.mapUrl){
+    map.innerHTML='<iframe title="Map for '+d.title.replace(/"/g,'&quot;')+'" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="'+d.mapUrl+'"></iframe><p style="font-size:0.8rem;color:var(--light);margin-top:0.5rem;">Open the map directly in <a href="'+d.mapUrl+'" target="_blank" rel="noopener noreferrer" style="color:var(--green);text-decoration:underline;">OpenStreetMap</a>.</p>';
+  }else{
+    map.innerHTML='<p style="font-size:0.8rem;color:var(--light);">Map unavailable.</p>';
+  }
+
   page.classList.add('open');
   page.scrollTop=0;
   document.body.style.overflow='hidden';
@@ -1127,9 +1151,20 @@ function hideDetail(){
   document.body.style.overflow='';
 }
 
-document.addEventListener('keydown',function(e){if(e.key==='Escape')hideDetail();});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape')hideDetail();
+  if((e.key==='Enter'||e.key===' ') && e.target.classList.contains('itin-card')){
+    e.preventDefault(); showDetail(e.target.getAttribute('data-detail'));
+  }
+});
+document.querySelectorAll('a[target="_blank"]').forEach(function(a){a.rel='noopener noreferrer';});
+var ham=document.querySelector('.ham');
+if(ham){ham.setAttribute('aria-label','Toggle mobile navigation');ham.setAttribute('aria-controls','mobnav');}
+
 </script>
 
-<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="fillybelly" data-description="Support me on Buy me a coffee!" data-message="Buy us a coffee" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
-</body>
+<a aria-label="Buy Filly Belly a coffee" class="floating-coffee" href="https://www.buymeacoffee.com/fillybelly" rel="noopener noreferrer" target="_blank">
+<span aria-hidden="true" class="floating-coffee-icon">☕</span>
+<span class="floating-coffee-text">Buy us a coffee</span>
+</a></body>
 </html>
